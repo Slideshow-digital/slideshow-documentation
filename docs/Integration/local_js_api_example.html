@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<style>
+			body { background-color: white; }
+		</style>
+	</head>
+	<body>
+		<h1>Examples for Slideshow's Local JavaScript API</h1>
+		
+		<h2>Method SlideshowAPI.showFile(zoneName, fileName, length)</h2>
+		
+		<button onclick="SlideshowAPI.showFile(null, 'image1.jpg', 5);">
+			Display file image1.jpg<br>on the main zone<br>for 5 seconds
+		</button>
+		<button onclick="SlideshowAPI.showFile('Side zone', 'images/image2.jpg', 10);">
+			Display file image2.jpg from folder images<br>in the zone called Side zone<br>for 10 seconds
+		</button>
+		<button onclick="SlideshowAPI.showFile(null, 'video1.mp4', 10);">
+			Display file video1.mp4<br>on the main zone<br>(length is ignored)
+		</button>
+		<button onclick="SlideshowAPI.showFile('audio', 'song1.mp3', 10);">
+			Play file song1.mp3<br>as a background audio<br>(length is ignored)
+		</button>
+		
+		<h2>Method SlideshowAPI.next(zoneName)</h2>
+		
+		<button onclick="SlideshowAPI.next(null);">
+			Go to the next item<br>in the playlist on the main zone
+		</button>
+		<button onclick="SlideshowAPI.next('Side zone');">
+			Go to the next item<br>in the playlist in the zone called Side zone
+		</button>
+		<button onclick="SlideshowAPI.next('audio');">
+			Go to the next item<br>in the audio playlist
+		</button>
+		
+		<h2>Method SlideshowAPI.setPlaylist(zoneName, playlistName)</h2>
+		
+		<button onclick="SlideshowAPI.setPlaylist(null, 'Video playlist');">
+			Set playlist called Video playlist<br>on the main zone
+		</button>
+		<button onclick="SlideshowAPI.setPlaylist('Side zone', 'Image playlist');">
+			Set playlist called Image playlist<br>in the zone called Side zone
+		</button>
+		
+		<h2>Method SlideshowAPI.pause(zoneName) / SlideshowAPI.resume(zoneName)</h2>
+		
+		<button onclick="SlideshowAPI.pause(null);">
+			Pause playback<br>on the main zone
+		</button>
+		<button onclick="SlideshowAPI.resume('Side zone');">
+			Pause playback<br>in the zone called Side zone
+		</button>
+		<button onclick="SlideshowAPI.resume(null);">
+			Resume playback<br>on the main zone
+		</button>
+	</body>
+</html>

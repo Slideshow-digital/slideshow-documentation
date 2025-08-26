@@ -1,0 +1,18 @@
+site_name: Slideshow Documentation
+site_description: Documentation for Slideshow - Digital Signage System
+copyright: Copyright 2025 © Milan Fabian
+theme:
+  name: material
+  favicon: assets/favicon.ico
+  logo: assets/logo.svg
+  palette:
+    scheme: slate
+    
+    
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption

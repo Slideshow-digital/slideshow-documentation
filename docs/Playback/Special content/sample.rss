@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <item>
+      <title>Title of the first message</title>
+      <description>This is first sample message for Slideshow application.</description>
+    </item>
+    <item>
+      <title>Title of the second message</title>
+      <description>This is another message, which can be used for testing. Feel free to edit the file.</description>
+    </item>
+  </channel>
+</rss>
