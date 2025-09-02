@@ -2,7 +2,7 @@
 
 Slideshow contains several different video players, each using a different method to render videos on the screen. As there is a great variety between hardware video decoders of various manufacturers, each device model might work best with a different video player.
 
-By default, ExoPlayer + TextureView is used. If you want to change the video player, you can do so via web interface, menu `Settings` – `Device settings`, setting `Video player type`. Reload the app or refresh your screen layout to apply the change.
+By default, ExoPlayer + TextureView is used. If you want to change the video player, you can do so via web interface → menu `Settings` → `Device settings` → setting `Video player type`. Reload the app or refresh your screen layout to apply the change.
 
 ![Choice of video players in Device settings](video_playback_setting.png "Choice of video players in Device settings")
 

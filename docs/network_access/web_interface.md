@@ -1,7 +1,3 @@
----
-weight: -1
----
-
 # Web Interface
 
 If your Android device is connected to a local network, you can manage Slideshow from a computer, phone, or tablet within the same LAN. Note that the interfaces mentioned bellow work only from the same local network (LAN). If you want to manage Slideshow remotely, you can setup file synchronization from your HTTP/FTP server, Google Drive or Dropbox.
@@ -18,7 +14,7 @@ Web interface can be accessed from the web browser on your computer. You can fin
 
 If the Android device has several networks (e.g. WiFi + Wired, or WiFi + 4G data), Slideshow will listen on all the networks, but will display only a single IP address on the screen. If you are on the same network as the Android device and can’t connect to the address displayed by Slideshow, please verify / disconnect other networks.
 
-The port number for web interface can be changed via web interface – menu `Settings` → `Device settings` → `HTTP port number` or `HTTPS port number` or on-screen menu → `Basic settings` → `HTTP port number`. If you want to use port number bellow 1024, the device has to be rooted and port 8080 (for HTTP) / 8443 (for HTTPS) has to be free on the device (see this blog post for explanation).
+The port number for web interface can be changed via web interface → menu `Settings` → `Device settings` → `HTTP port number` or `HTTPS port number` or on-screen menu → `Basic settings` → `HTTP port number`. If you want to use port number bellow 1024, the device has to be rooted and port 8080 (for HTTP) / 8443 (for HTTPS) has to be free on the device (see this blog post for explanation).
 
 ## Credentials
 
