@@ -1,20 +1,25 @@
-site_name: Slideshow Documentation
+site_name: SlideShow.digital
 site_description: Documentation for Slideshow - Digital Signage System
-copyright: Copyright 2025 © Milan Fabian
+copyright: Copyright © 2025 Milan Fabian
 theme:
   name: material
   favicon: assets/favicon.ico
   logo: assets/logo.svg
   palette:
     scheme: slate
-    features:
-      - search.suggest
+  features:
+    - search.suggest
+    - navigation.top
+    - navigation.tracking   
+    - navigation.tabs
+    - navigation.indexes
     
-
 plugins:
   - mkdocs-video
   - search
-    
+  - minify:
+      minify_html: true
+      
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -26,3 +31,81 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  status:
+    new: Recently added
+    deprecated: Deprecated
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCJFSXCItojY4PS76JNr_pdQ
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/slideshowPlay
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/SlideshowPlay
+      extra:
+  generator: false
+  
+nav:
+  - Documentation:
+    - documentation/index.md
+    - Playback:
+      - documentation/playback/supported_file_types.md
+      - documentation/playback/video_playback.md
+      - documentation/playback/web_pages.md
+      - documentation/playback/synchronized_playback.md
+      - documentation/playback/background_audio.md
+      - Special content:
+        - documentation/playback/special_content/weather_forecast.md
+        - documentation/playback/special_content/rss_feeds.md
+        - documentation/playback/special_content/date_time.md
+        - documentation/playback/special_content/android_widgets.md
+        - documentation/playback/special_content/name_days.md
+        - documentation/playback/special_content/video_stream.md
+        - documentation/playback/special_content/video_input.md
+        - documentation/playback/special_content/audio_stream.md
+      - On-screen formatting:
+        - documentation/playback/on-screen_formatting/transitions_animations.md
+        - documentation/playback/on-screen_formatting/scaling_images.md
+        - documentation/playback/on-screen_formatting/fonts.md
+        - documentation/playback/on-screen_formatting/description_text.md
+    - Network access:
+      - documentation/network_access/web_interface.md
+      - documentation/network_access/file_upload.md
+      - documentation/network_access/communication_between_devices.md
+    - Configuration:
+      - documentation/configuration/file_storage.md
+      - documentation/configuration/layout_playlist_scheduling.md
+      - documentation/configuration/settings.md
+      - documentation/configuration/automatic_startup.md
+      - documentation/configuration/screen_rotation.md
+      - documentation/configuration/remote_update.md
+      - documentation/configuration/localization.md
+    - Interactivity:
+      - documentation/interactivity/keyboard.md
+      - documentation/interactivity/triggers.md
+      - documentation/interactivity/face_detection.md
+    - Integration:
+      - documentation/integration/rest_api.md
+      - documentation/integration/serial_port.md
+      - documentation/integration/local_javascript_api.md
+      - documentation/integration/mqtt.md
+      - documentation/integration/open_sound_control.md
+    - Hardware:
+      - documentation/hardware/suggested_hardware.md
+      - documentation/hardware/benchmarks.md
+      - documentation/hardware/root_on_android.md
+      - Hardware reviews:
+        - documentation/hardware/hardware_reviews/amazon_fire_tv_stick_4k_max.md
+        - documentation/hardware/hardware_reviews/mekotronics_r58x.md
+    - Case studies:
+      - documentation/case_studies/art_hotel_kastiel.md
+      - documentation/case_studies/artwork_james_mcgrath.md
+      - documentation/case_studies/local_business_patriots.md
+      - documentation/case_studies/ormiston_horizon_academy.md
+    - documentation/troubleshooting.md
+    - documentation/support_us.md
+    
