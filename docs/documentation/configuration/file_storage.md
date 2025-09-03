@@ -12,7 +12,7 @@ Only the files for playing will be saved on SD card / USB drive. Configuration a
 
 ## USB Flash Drive as a source for copying or temporary playback
 
-Slideshow can detect when you plug-in USB Flash Drive into your Android device (into USB host port) and depending on setting Action on Flash drive insert one of the following things can happen:
+Slideshow can detect when you plug in USB Flash Drive into your Android device (into USB host port) and depending on the setting `Action on Flash drive insert` one of the following things can happen:
 
 - **Do nothing** – Slideshow will "ignore" the flash drive and continue playing media files from internal memory.
 - **Copy files from Flash drive** – Slideshow will pause the current playlist and copy all files from the flash drive into internal memory, overwriting files with the same name.
@@ -23,7 +23,7 @@ You can choose which folder to use on the flash drive in setting `Folder on Flas
 
 Flash drives formatted to either EXT4 or FAT32 should be supported by all versions of Android. Support of other file systems depends on your Android device.
 
-If you add setup.csv file to USB flash drive, it will be recognized and processed before copying files.
+If you add [setup.csv](setup_csv.md) file to USB flash drive, it will be recognized and processed before copying files.
 
 ![Screen while copying files from USB flash drive](file_storage_copy.png)
 /// caption

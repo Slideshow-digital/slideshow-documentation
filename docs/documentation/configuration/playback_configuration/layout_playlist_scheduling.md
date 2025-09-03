@@ -54,6 +54,6 @@ Visualization of little bit more complex setup: two zones on the screen, one zon
 
 
 
-## Tutorial
+## Video tutorial
 
 <iframe style="width: 100%; aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/dC285mcUcbY?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0" frameborder="0" allowfullscreen></iframe>

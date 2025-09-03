@@ -22,7 +22,7 @@ WinSCP with prepared connection to Slideshow via FTP
 
 ## WebDAV interface
 
-You can access all files uploaded to Slideshow using a WebDAV client (for example [WinSCP](https://winscp.net/)). WebDav interface is running on the same port as [HTTP and HTTPS interface](web_interface.md), on path `/webdav`. Use the following connection settings:
+You can access all files uploaded to Slideshow using a WebDAV client (for example, [WinSCP](https://winscp.net/)). WebDav interface is running on the same port as [HTTP and HTTPS interface](web_interface.md), on path `/webdav`. Use the following connection settings:
 
 - **IP address:** LAN IP address of the device
 - **Port:** same port as HTTP or HTTPS interface

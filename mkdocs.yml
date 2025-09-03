@@ -53,7 +53,7 @@ nav:
   - Documentation:
     - documentation/index.md
     - Playback:
-      - documentation/playback/supported_file_types.md
+      - documentation/playback/supported_media_types.md
       - documentation/playback/video_playback.md
       - documentation/playback/web_pages.md
       - documentation/playback/synchronized_playback.md
@@ -75,15 +75,26 @@ nav:
     - Network access:
       - documentation/network_access/web_interface.md
       - documentation/network_access/file_upload.md
+      - File synchronization:
+        - documentation/network_access/file_synchronization/index.md
+        - Google Drive: documentation/network_access/file_synchronization/file_synchronization_google_drive.md
+        - Dropbox: documentation/network_access/file_synchronization/file_synchronization_dropbox.md
+        - HTTP / FTP: documentation/network_access/file_synchronization/file_synchronization_http_ftp.md
       - documentation/network_access/communication_between_devices.md
     - Configuration:
+      - Playback configuration:
+        - documentation/configuration/playback_configuration/content_playlist.md
+        - documentation/configuration/playback_configuration/screen_layout.md
+        - documentation/configuration/playback_configuration/layout_playlist_scheduling.md
+        - documentation/configuration/playback_configuration/scheduled_file_deletion.md
       - documentation/configuration/file_storage.md
-      - documentation/configuration/layout_playlist_scheduling.md
       - documentation/configuration/settings.md
       - documentation/configuration/automatic_startup.md
       - documentation/configuration/screen_rotation.md
       - documentation/configuration/remote_update.md
       - documentation/configuration/localization.md
+      - documentation/configuration/setup_csv.md
+      - Backup and restore: documentation/configuration/configuration_backup_restore.md
     - Interactivity:
       - documentation/interactivity/keyboard.md
       - documentation/interactivity/triggers.md
@@ -101,11 +112,13 @@ nav:
       - Hardware reviews:
         - documentation/hardware/hardware_reviews/amazon_fire_tv_stick_4k_max.md
         - documentation/hardware/hardware_reviews/mekotronics_r58x.md
+        - documentation/hardware/hardware_reviews/benq_st550k.md
     - Case studies:
       - documentation/case_studies/art_hotel_kastiel.md
       - documentation/case_studies/artwork_james_mcgrath.md
       - documentation/case_studies/local_business_patriots.md
       - documentation/case_studies/ormiston_horizon_academy.md
+    - documentation/release_notes.md
     - documentation/troubleshooting.md
     - documentation/support_us.md
     

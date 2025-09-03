@@ -16,6 +16,6 @@ Steps necessary to set up playing audio streams through Slideshow’s web interf
 2. Edit automatically created playlist and set `Sound` to `Audio playlist`.
 3. Go to menu `Playlist` → `Audio playlists schedule` and set up schedule for the audio playlist
 
-## Tutorial
+## Video tutorial
 
 <iframe style="width: 100%; aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/uETKG_qH--8?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0" frameborder="0" allowfullscreen></iframe>

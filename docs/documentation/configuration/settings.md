@@ -1,10 +1,10 @@
 # Settings
 
-General settings of Slideshow can be changed via the web interface – menu `Settings` – `Device settings`. Applying the change of some of the settings requires reload of the application (close and reopen), for example through menu `Settings` – `Reboot / reload` – `Reload application`.
+General settings of Slideshow can be changed via the web interface → menu `Settings` → `Device settings`. Applying the change of some settings requires reload of the application (close and reopen), for example, through menu `Settings` → `Reboot / reload` → `Reload application`.
 
-A few of the settings are available also through the on-screen menu - `Basic settings`.
+A few of the settings are available also through the on-screen menu → `Basic settings`.
 
-You can backup and restore these settings using XML configuration backup.
+You can back up and restore these settings using [XML configuration backup](configuration_backup_restore.md).
 
 ## List of available settings
 

@@ -1,4 +1,4 @@
-# Supported file types
+# Supported media types
 
 Below is the list of file types, formats and codecs supported by the current version of Slideshow software:
 

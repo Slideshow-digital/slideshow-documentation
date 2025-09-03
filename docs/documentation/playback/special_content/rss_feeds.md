@@ -1,6 +1,6 @@
 # RSS feeds
 
-You can setup up displaying RSS feeds on screen by creating a new content with type `RSS messages` and adding it to your playlist. Alternatively, you can use sample screen layout `With side panels` as a starting point.
+You can set up up displaying RSS feeds on screen by creating a new content with type `RSS messages` and adding it to your playlist. Alternatively, you can use sample screen layout `With side panels` as a starting point.
 
 ![Dialog for adding new content](rss_feeds_content.png)
 /// caption
@@ -17,15 +17,15 @@ The source of displayed RSS messages can be setup through the field URL for RSS 
 
 You can enter multiple sources for one content, delimit them with comma (`,`). Messages from all sources will be displayed in cycle, starting with the first message of the first source and ending with the last message of the last source.
 
-In case the RSS feed contains HTML/XML tags you don’t want to display on the screen (string such as `&nbsp;` or `<img ...>`, enable `Remove XML tags` options on the Edit content page.
+In case the RSS feed contains HTML/XML tags you don’t want to display on the screen (string such as `&nbsp;` or `<img ...>`), enable `Remove XML tags` options on the `Edit content page`.
 
-File [sample.rss](sample.rss) is available for testing, it contains a minimal example needed for Slideshow with two messages. If you would like to host your RSS files in cloud, you can use [www.rss-hosting.com](https://www.rss-hosting.com).
+File [sample.rss](sample.rss) is available for testing; it contains a minimal example needed for Slideshow with two messages. If you would like to host your RSS files in cloud, you can use [www.rss-hosting.com](https://www.rss-hosting.com).
 
 ## Description of RSS file
 
 RSS format is plain-text XML format, so it can be easily edited manually using a text editor. You can find descriptions of the format on [Wikipedia](https://en.wikipedia.org/wiki/RSS) or [W3schools](https://www.w3schools.com/xml/xml_rss.asp). Slideshow displays only tags `title` and `description` (alternatively `summary` or `content`) from each message of the RSS file on screen. Title is displayed with bold font, description with regular font.
 
-If you want to create an RSS file by yourself and want a more advanced tool than a simple text editor, you can try for example [RSS Builder](https://sourceforge.net/projects/rss-builder/).
+If you want to create an RSS file by yourself and want a more advanced tool than a simple text editor, you can try, for example, [RSS Builder](https://sourceforge.net/projects/rss-builder/).
 
 ## Video tutorial
 

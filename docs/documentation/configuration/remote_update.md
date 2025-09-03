@@ -15,7 +15,7 @@ For other non-rooted devices, you can use only the automatic update option from 
 
 ## Remote update through web interface
 
-If you can access Slideshow’s web interface, you can upload a new APK file through menu Settings – Application update. Update process will start several seconds after the file upload is finished and it may take up to one minute. Slideshow app will automatically reload after the update process is finished.
+If you can access Slideshow’s web interface, you can upload a new APK file through menu `Settings` → `Application update`. The update process will start several seconds after the file upload is finished, and it may take up to one minute. Slideshow app will automatically reload after the update process is finished.
 
 ![Page for remote update](remote_update_web.png)
 /// caption
@@ -24,7 +24,7 @@ Page for remote update
 
 ## Remote update through File synchronization
 
-Slideshow can be updated via File synchronization from Google Drive, Dropbox, HTTP/FTP server or from USB flash drive using command `:UPDATE;APK file name;version` in the setup.csv file. Use the last part of the command ("version") to prevent Slideshow from unnecessary processing the file if the same version is already installed. `External config import` has to be enabled in Device settings in order for this functionality to work (this setting acts a security check).
+Slideshow can be updated via File synchronization from Google Drive, Dropbox, HTTP/FTP server or from USB flash drive using command `:UPDATE;APK file name;version` in the [setup.csv](setup_csv.md) file. Use the last part of the command ("version") to prevent Slideshow from unnecessary processing the file if the same version is already installed. `External config import` has to be enabled in Device settings in order for this functionality to work (this setting acts a security check).
 
 Update is always performed as a last step of the synchronization process, after all other files have been downloaded. It may take up to one minute and Slideshow will automatically reload afterward.
 

@@ -38,7 +38,6 @@ We initially used a different power adapter, but after getting a "Insufficient U
 Content of the box
 ///
 
-
 ## First start
 
 After plugging the Fire TV Stick in for the first time, we were greeted with the first-time setup consisting of several steps:
@@ -150,6 +149,22 @@ Fire TV Stick 4K Max is marketed as with 8 GB **internal storage**. Part of the 
 As for the **automatic start** of Slideshow after the stick boots, you can set it up by checking “Start at system boot” in Basic settings in the on-screen menu. Slideshow will claim that a system permission is needed, but this permission is not present in Amazon’s version of Android, so in reality, it is not needed. With the “Start at system boot” option turned on, Slideshow will automatically start a few seconds after the device loads. Settings Slideshow as Launcher app is not possible, Amazon doesn’t allow changing the Launcher app on its devices at all.
 
 As the stick is **not rooted**, some of Slideshow’s extra features, such as remote app update or remote reboot, can’t be used at all.
+
+### Still Watching popup
+
+With the recent firmware update on Amazon Fire TV devices, you might have noticed a rise in the number of times a popup asking whether you are still watching the TV is displayed. Alternatively, you simply find your screen going blank with the device in sleep mode. The pop-up is displayed if there is no remote control activity for 4 hours and shortly afterward the device is put to sleep automatically.
+
+This is, of course, not wanted for Digital Signage screens, which should be up and running for hours without any popups. Fortunately, there is a quick and simple fix for this.
+
+1. Go to Settings on your Amazon Fire TV device
+2. Select Preferences
+3. Select Data Usage Monitoring
+4. Change Still Watching to Off
+
+![Turn off Still Watching on Amazon Fire TV Stick](amazon_4k_max_still_watching.jpg)
+/// caption
+Turn off Still Watching on Amazon Fire TV Stick
+///
 
 ## Conclusion
 

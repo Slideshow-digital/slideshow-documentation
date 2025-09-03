@@ -27,9 +27,10 @@ Web interface - login page
 
 ## Web interface via HTTPS
 
-Slideshow also supports secured HTTPS protocol for web interface. The address is usually `https://{device’s IP address}` for rooted devices and `https://{devices’s IP address}:8443` for non-rooted devices. By default, Slideshow generates self-signed SSL certificate on the first start, so browsers will display security alert before accessing the page. You can upload your own SSL certificate for HTTPS in [PKCS12 format](https://en.wikipedia.org/wiki/PKCS_12) via web interface → menu `Settings` → `Device settings` → `Certificate for HTTPS`.
+Slideshow also supports secured HTTPS protocol for web interface. The address is usually `https://{device’s IP address}` for rooted devices and `https://{devices’s IP address}:8443` for non-rooted devices. By default, Slideshow generates self-signed SSL certificate on the first start, so browsers will display security alert before accessing the page. You can upload your own SSL certificate for HTTPS in [PKCS12 format](https://en.wikipedia.org/wiki/PKCS_12) (includes both a private key and certificate) via web interface → menu `Settings` → `Device settings` → `Certificate for HTTPS`.
 
 ![Dialog for uploading certificate for HTTPS](web_interface_ssl.jpg)
 /// caption
 Dialog for uploading certificate for HTTPS
 ///
+
