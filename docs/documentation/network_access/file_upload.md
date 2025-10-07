@@ -29,10 +29,28 @@ You can access all files uploaded to Slideshow using a WebDAV client (for exampl
 - **Username / password:** same as for the web interface, default is admin / admin.
 - **Remote directory:** /webdav
 
-!!! warning "Native Windows WebDAV client is not compatible"
-    WebDav client integrated in Windows operating system is not fully compatible with Slideshow, because it doesn’t support HTTP Basic Auth for WebDAV by default.
-
 ![WinSCP with prepared connection to Slideshow via WebDav](webdav_winscp.png)
 /// caption
 WinSCP with prepared connection to Slideshow via WebDav
 ///
+
+### WebDAV on Windows
+
+!!! warning "Native Windows WebDAV client is not compatible"
+    WebDav client integrated in Windows operating system is not fully compatible with Slideshow, because it doesn’t support HTTP Basic Auth for WebDAV by default.
+
+If you want to use WebDAV client integrated in Windows OS, you have to enable it through registry editor, set entry `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters\BasicAuthLevel` to value `2`
+
+If you are not comfortable changing registry settings in Windows (we fully understand if you aren’t), we suggest using alternative client, for example, [WinSCP](https://winscp.net).
+
+### WebDAV on Linux
+
+On Linux, you can mount Slideshow’s data using davfs2 package (replace the IP address and port with the one you are using for Slideshow):
+
+```
+mount -t davfs http://192.168.1.100:8080/webdav /mnt/slideshow-webdav/
+```
+or
+```
+mount -t davfs https://192.168.1.100:8443/webdav /mnt/slideshow-webdav/
+```

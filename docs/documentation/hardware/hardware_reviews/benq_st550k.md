@@ -19,7 +19,7 @@ X-Sign is cloud-based digital signage software by BenQ, which is preinstalled on
 
 ## Notes
 
-- Displays are running Android 4.3, which is quite old, and the most recent version of Slideshow you can use is [3.20.3](../../release_notes.md#version-3203-). 
+- Displays are running Android 4.3, which is quite old, and the most recent version of Slideshow you can use is [3.20.3](../../release_notes.md#version-3203). 
 - You can count with approximately 1,8 GB of free space for your files.
 - Android on these displays is not rooted, that means Slideshow's web interface will be available on port 8080 (http://...:8080) and you won't be able to reboot the device remotely
 - If you would like to schedule power on and power off, you can set it up from your computer using [BenQ's MDA application](https://www.benq.eu/en-eu/business/support/products/projector/multiple-display-administrator/download.html). Just note that if you turn off the display with remote control or button, the scheduler won't/can't turn it back on. Turning on by the scheduler works only if the scheduler turned the display off previously.

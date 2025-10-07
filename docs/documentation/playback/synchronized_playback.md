@@ -1,14 +1,14 @@
 # Synchronized playback
 
-Synchronized playback means displaying media on two or more screens at the same time, for example the same video is started at the same moment on two TVs, or two sets of pictures are always changed at the same moment.
+Synchronized playback means displaying media on two or more screens at the same time. For example, the same video is started at the same moment on two TVs, or two sets of pictures are always changed at the same moment.
 
-Slideshow support synchronized playback either across multiple screen layout zones on the same device, or across multiple devices on the same local network.
+Slideshow supports synchronized playback either across multiple screen layout zones on the same device or across multiple devices on the same local network.
 
 ## Synchronizing devices
 
-For synchronized playback across multiple devices, all devices have to be on the same local network, connected via LAN cable (Wi-Fi is not supported for synchronized playback) and communication between devices has to be set up. Synchronized playback will work only between devices with the same `Devices group code` setting.
+For synchronized playback across multiple devices, all devices have to be on the same local network, connected via LAN cable (Wi-Fi is not supported for synchronized playback) and communication between devices has to be set up. Synchronized playback will work only between devices with the same `Devices group code` [setting](../configuration/settings.md#network-interfaces).
 
-We highly suggest using the same hardware and firmware version for synchronized playback across multiple players, for example the same model of Android boxes. As video loading differs a lot between various devices, the delay between starting video playback on two devices from various manufacturers might be too high (more than 200 milliseconds). Using the same model of display is also important in order to reduce the lag.
+We highly suggest using the same hardware and firmware version for synchronized playback across multiple players, for example, the same model of Android boxes. As video loading differs a lot between various devices, the delay between starting video playback on two devices from various manufacturers might be too high (more than 200 milliseconds). Using the same model of display is also important in order to reduce the lag.
 
 When using the same device model, the delay between synchronized playback on multiple devices is usually lower than 50 milliseconds, which is not visible to regular viewers.
 
@@ -16,7 +16,7 @@ When using the same device model, the delay between synchronized playback on mul
 
 Playlists that should be played synchronously should have the same `Sync code` set. This can be changed via Slideshow’s web interface → menu `Playlists` → `Edit playlist` → `Sync code`. If no `Sync code` is set, the playback won’t be synchronized.
 
-We suggest using content type `Files alphabetically` instead of `Files randomly` for synchronized playback. Enabling `Preload content in playlist` setting is also encouraged.
+We suggest using content type `Files alphabetically` instead of `Files randomly` for synchronized playback. Enabling `Preload content in playlist` [setting](../configuration/settings.md#on-screen-formatting) is also encouraged.
 
 ## Checklist for synchronized playback across multiple devices
 

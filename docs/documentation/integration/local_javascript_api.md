@@ -2,12 +2,12 @@
 
 Local JavaScript API allows you to create interactive digital signage screens by creating an HTML file, which can change the content displayed in each zone on the screen. For example, clicking a button in one part of the screen can trigger the display of a particular file in another part of the screen. Setting up such an HTML file requires at least basic knowledge of HTML and JavaScript.
 
-All methods of the API are static methods in class `SlideshowAPI`. It can be accessed from HTML files displayed on the screen, the HTML file is displayed either from the internal memory, or as a website loaded from an URL file saved in the internal memory.
+All methods of the API are static methods in class `SlideshowAPI`. It can be accessed from HTML files displayed on the screen, the HTML file is displayed either from the internal memory, or as a website loaded from a URL file saved in the internal memory.
 
-Local JavaScript API is disabled by default for security reasons and can be enabled via web interface – menu `Settings` – `Device settings` – `Allow local API for web pages`.
+Local JavaScript API is disabled by default for security reasons and can be enabled via web interface → menu `Settings` → `Device settings` → `Allow local API for web pages`.
 
 !!! warning "Security consideration"
-    Enabling local JavaScript API and displaying 3rd party web pages may expose your Android device to an attacker. Make sure you display only verified web pages if you enable the local JavaScript API.
+    Enabling local JavaScript API, and displaying 3rd party web pages may expose your Android device to an attacker. Make sure you display only verified web pages if you enable the local JavaScript API.
 
 ## Available methods
 

@@ -1,5 +1,7 @@
 # Date and time
 
+Slideshow can display current date and/or time on the screen using content type `Date/Time`. The date and time of the Android device will be used as the source.
+
 ## Real time clock (RTC)
 
 Keeping the information about current time requires electricity. Same as your wristwatch won’t work without a battery, a clock in an electronic device requires power. When a device is turned off, unplugged from a power source and has no battery, there is no electricity to keep the internal clock of the device running, and it powers off as well. When you power on such a device, it either starts with some date set by the manufacturer or the same date and time as when it was last powered off.

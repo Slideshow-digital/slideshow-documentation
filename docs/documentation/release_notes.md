@@ -1,3 +1,7 @@
+---
+icon: material/download-box
+---
+
 # Release notes
 
 *Below is a list of all publicly released versions of Slideshow, together with short release notes and download links.*

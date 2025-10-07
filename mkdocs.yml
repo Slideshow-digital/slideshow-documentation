@@ -54,7 +54,9 @@ nav:
     - documentation/index.md
     - Playback:
       - documentation/playback/supported_media_types.md
-      - documentation/playback/video_playback.md
+      - Video playback:
+        - documentation/playback/video_playback/index.md
+        - documentation/playback/video_playback/4k_videos.md
       - documentation/playback/web_pages.md
       - documentation/playback/synchronized_playback.md
       - documentation/playback/background_audio.md
@@ -113,6 +115,8 @@ nav:
         - documentation/hardware/hardware_reviews/amazon_fire_tv_stick_4k_max.md
         - documentation/hardware/hardware_reviews/mekotronics_r58x.md
         - documentation/hardware/hardware_reviews/benq_st550k.md
+        - documentation/hardware/hardware_reviews/novastar_tb40.md
+        - documentation/hardware/hardware_reviews/intel_compute_stick.md
     - Case studies:
       - documentation/case_studies/art_hotel_kastiel.md
       - documentation/case_studies/artwork_james_mcgrath.md
@@ -121,4 +125,5 @@ nav:
     - documentation/release_notes.md
     - documentation/troubleshooting.md
     - documentation/support_us.md
+    - documentation/privacy_policy.md
     

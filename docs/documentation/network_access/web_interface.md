@@ -34,3 +34,12 @@ Slideshow also supports secured HTTPS protocol for web interface. The address is
 Dialog for uploading certificate for HTTPS
 ///
 
+## Note: port numbers
+
+On Linux-based operating system (such as Android), port numbers 0 to 1023 are called restricted. Under normal circumstances, only administrator (also called root) can start an application which will be listening to on any of these ports. The reason for this is that many of the port numbers in range 0 to 1023 are commonly used as default ports for various protocols. It would be insecure if a regular user (non-administrator) could start an application listening on port 80 (HTTP port) and block the actual HTTP server.
+
+That's why on non-rooted devices, Slideshow starts web interface on port 8080 and FTP interface on port 8021. You can change these port numbers, but it is not possible to change them bellow 1024 due to security restrictions mentioned above.
+
+On rooted devices, Slideshow can listen on ports bellow 1024 using root access, but only indirectly. That means that the web interface is still actually listening on port 8080 and using root access, Slideshow asks Android for local redirection from port 80 to port 8080. That means if your browser connects to port 80 on the device, Android will internally redirect it to port 8080 for Slideshow. Similar redirection is made for HTTPS (443 → 8443) and FTP (21 → 8021).
+
+On application start, Slideshow automatically detects whether the device is rooted or not. If you open `Help` in on-screen menu, you will always see the correct (working) address for web and FTP interface.

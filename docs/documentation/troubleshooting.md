@@ -1,3 +1,7 @@
+---
+icon: material/bug-outline
+---
+
 # Troubleshooting
 
 ## Logs

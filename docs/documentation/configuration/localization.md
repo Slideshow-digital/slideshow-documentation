@@ -4,7 +4,8 @@
 You can change the language of Slideshow’s user interface and web interface either through web interface → menu `Settings` → `Device settings` → `Language` or through on-screen menu → `Basic settings` → `Language`.
 
 This choice of language has no effect on the language of date/time and weather forecast displayed on the screen (names of days of week and months can be displayed). You can select this language separately via web interface → menu `Content` → `Edit`. The list of supported languages for date and weather panel depends on your Android image and usually contains 100+ languages on newer versions of Android.
-Currently supported languages
+
+## Currently supported languages
 
 * Chinese (thanks to evin792)
 * Croatian (thanks to Josip Papić)

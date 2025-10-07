@@ -35,7 +35,7 @@ Page for editing playlists schedule
 
 ## Audio playlists schedule
 
-There is a special scheduling of of audio playlists, they are not connected to any screen layout zone, as this kind of playlists acts as a background music. You can setup the schedule via menu Playlists, button Audio playlists schedule. Only playlists with type `Audio playlist` can be assigned to a background music.
+There is a special scheduling for audio playlists, they are not connected to any screen layout zone, as this kind of playlists acts as [background audio](../../playback/background_audio.md). You can set up the schedule via the web interface → menu `Playlists` → button `Audio playlists schedule`. Only playlists with type `Audio playlist` can be assigned to background audio.
 
 ## Diagrams for better clarification
 

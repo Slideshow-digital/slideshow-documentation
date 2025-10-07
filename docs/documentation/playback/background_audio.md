@@ -1,6 +1,10 @@
 # Background audio
 
-Slideshow can be used also as a headless music player, without any screen.
+Slideshow can be used also as a headless music player, without any screen, or play audio in addition to regular screen playback.
+
+[Background audio schedule](../configuration/playback_configuration/layout_playlist_scheduling.md#audio-playlists-schedule) can be set up via the web interface → menu `Playlists` → button `Audio playlists schedule`.
+
+Slideshow supports background audio in the form of audio files, or [network audio stream](special_content/audio_stream.md).
 
 ## Video tutorial
 

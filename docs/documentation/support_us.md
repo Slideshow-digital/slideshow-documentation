@@ -1,3 +1,7 @@
+---
+icon: material/lifebuoy
+---
+
 # Support us
 
 Slideshow is free for non-commercial as well as commercial usage, and we are aiming to keep it this way. We believe in free software, especially in a competitive field like digital signage.

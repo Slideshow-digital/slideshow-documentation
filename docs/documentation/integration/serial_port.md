@@ -22,14 +22,14 @@ Permission to access a USB device has to be granted manually on the screen of th
 
 ## Serial port setup
 
-Configuration of the serial port can be done through Slideshow’s web interface – menu `Setting` – `Device settings` – section `Serial port`. Baud rate, data bits, stop bits and parity have to be set in Slideshow settings exactly the same as on the second device. Selected baud rate has to be supported by the serial port on the Android device.
+Configuration of the serial port can be done through Slideshow’s web interface → menu `Setting` → `Device settings` → section `Serial port`. Baud rate, data bits, stop bits and parity have to be set in Slideshow settings exactly the same as on the second device. Selected baud rate has to be supported by the serial port on the Android device.
 
 ![Configuration of serial port in Device settings](serial_port_config.png)
 /// caption
 Configuration of serial port in Device settings
 ///
 
-List of currently detected serial ports on the particular Android device can be found through menu `Information` – `About device` – `Available serial ports`.
+List of currently detected serial ports on the particular Android device can be found through menu `Information` → `About device` → `Available serial ports`.
 
 ## Using serial port
 
