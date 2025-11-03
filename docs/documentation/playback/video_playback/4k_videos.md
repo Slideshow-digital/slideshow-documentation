@@ -47,5 +47,3 @@ On RK3288 box, you can choose between various HDMI output resolutions, but no ma
 ## Conclusion
 
 The main point of this article is to warn potential buyers of various Android boxes, that choosing any Android box claiming to have 4K support may not be the best idea for digital signage. Always do research before choosing the right hardware.
-
-If you know any good Android box with 4K framebuffer, [let us know](https://slideshow.digital/contact-us/). We will be happy to add it here.

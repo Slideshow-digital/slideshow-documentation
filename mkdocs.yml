@@ -46,12 +46,14 @@ extra:
       link: https://www.facebook.com/slideshowPlay
     - icon: fontawesome/brands/x-twitter
       link: https://x.com/SlideshowPlay
-      extra:
+    - icon: fontawesome/solid/mug-hot
+      link: https://ko-fi.com/slideshow
   generator: false
   
 nav:
   - Documentation:
     - documentation/index.md
+    - documentation/tutorial.md
     - Playback:
       - documentation/playback/supported_media_types.md
       - Video playback:
@@ -125,5 +127,6 @@ nav:
     - documentation/release_notes.md
     - documentation/troubleshooting.md
     - documentation/support_us.md
+    - documentation/white_label.md
     - documentation/privacy_policy.md
     

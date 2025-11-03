@@ -2,15 +2,19 @@
 
 In case you want to display content on your TV in portrait mode or rotate the content by any other way, Slideshow offers two options for how to achieve it:
 
-## Screen layout rotation
+## Screen Layout Rotation
 
-Screen layout rotation can be set through the web interface → menu `Screen layout` → `Edit screen layout` → `Rotation`. The layout can be rotated by 90°, 180° or 270°. Only the layout is rotated, the on-screen menu stays as it was.
+This method rotates only the Slideshow content layout while leaving the on-screen menu and system UI untouched.
 
-Rotating screen layout is supported universally on every device (the support doesn’t depend on the hardware). For video playback on rotated layouts we suggest using the player type `ExoPlayer + TextureView` or `ExoPlayer + SurfaceView` (see [Device settings](settings.md#screen-layout)).
+Screen layout rotation can be set through the web interface → menu `Screen layout` → `Edit screen layout` → `Rotation`. The layout can be rotated by 90°, 180° or 270°.
 
-## Android screen orientation
+Rotating screen layout is supported universally on every device (the support doesn’t depend on the hardware). For video playback on rotated layouts we suggest using the player type `ExoPlayer + TextureView` or `ExoPlayer + SurfaceView` (see [Device settings](settings.md#on-screen-formatting)).
 
-Screen orientation of the entire Android system can be set through the web interface → menu `Settings` → `Device settings` → `Screen orientation`, or through on-screen menu → `Basic settings` → `Screen orientation in on-screen menu`.
+## Android System Orientation
+
+This method changes the entire Android system orientation, affecting Slideshow and any other running apps.
+
+It can be set through the web interface → menu `Settings` → `Device settings` → `Screen orientation`, or through on-screen menu → `Basic settings` → `Screen orientation in on-screen menu`.
 
 There are two sets of options:
 
@@ -23,3 +27,12 @@ Support of these options depends on the particular hardware model, not every man
 /// caption
 Setting screen orientation through Basic settings
 ///
+
+## Quick Decision Guide
+
+| Need                                                  | Recommended method                                                                    |
+|-------------------------------------------------------|---------------------------------------------------------------------------------------|
+| Rotate only Slideshow content                         | Screen Layout Rotation                                                                |
+| Rotate entire system (e.g., for kiosk mode)           | Android System Orientation *(if supported)*                                           |
+| Device does not respond to system orientation changes | Screen Layout Rotation                                                                |
+| Playing videos on a rotated layout                    | Ensure `ExoPlayer` is selected in [Device settings](settings.md#on-screen-formatting) |

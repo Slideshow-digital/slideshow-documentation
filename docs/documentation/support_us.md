@@ -4,12 +4,40 @@ icon: material/lifebuoy
 
 # Support us
 
-Slideshow is free for non-commercial as well as commercial usage, and we are aiming to keep it this way. We believe in free software, especially in a competitive field like digital signage.
+The Slideshow app is free for both commercial and non-commercial use — and our goal is to keep it that way.  
+We believe in free software, especially in a competitive field like digital signage.
 
-If you like Slideshow app, there are several ways how you can personally contribute to making it better:
+If you enjoy using Slideshow and want to help it grow, there are several ways you can personally contribute:
 
-- **Spread the word**, recommend Slideshow to your friends, leave a positive review on Google Play Store. The more people use Slideshow, the more feedback we receive, which helps us to make Slideshow app better. Many new features added to the Slideshow over the years has been suggested to us by the users.
-- **Help us with testing Slideshow** on various devices, with various combinations of settings, screen layouts, and playlists. We are thoroughly testing each version before it is released, but as the number of different combinations rises, we still might miss something. If you find any problem, send as a bug report, we will be happy to fix the problem.
-- **Translate Slideshow into your local language.** Thanks to the community, Slideshow has currently support for many different languages. If you are fluent in a language that isn’t yet in the list and have some free time to help us with translation, we will be happy to add your language to Slideshow.
-- **Support the development directly**, for example by buying a branded version of Slideshow for your business, ordering a custom commercial feature or sending us a new device for testing. We have several Android devices, on which we are testing each version, but there are new Android boxes and sticks each month on which we haven’t tested Slideshow yet.
-- **Buy as a coffee** via [https://ko-fi.com/slideshow](https://ko-fi.com/slideshow), as a direct donation
+## Spread the Word
+
+Recommend Slideshow to your friends, colleagues, or clients, and leave a positive review on the [Google Play Store](https://play.google.com/store/apps/details?id=sk.mimac.slideshow). The more people use Slideshow, the more feedback we receive — which helps us improve the app.
+
+Many of Slideshow’s best features were originally suggested by users like you.
+
+## Help with Testing
+
+Test Slideshow on different devices, screen layouts, and playlist configurations. While every version is carefully tested before release, the variety of Android devices and settings means we can still miss something.
+
+If you encounter a problem, please send us a [bug report](troubleshooting.md#bug-report) — we’ll be happy to fix it.
+
+##  Contribute Translations
+
+Thanks to our community, Slideshow already supports [many languages](configuration/localization.md).  
+If you’re fluent in a language that isn’t yet available and have some time to help, we’d love to include your translation.
+
+Your contribution helps make Slideshow accessible to more users worldwide.
+
+## Support Development Directly
+
+You can support ongoing development in several ways:
+
+- Purchase a [white-label version](white_label.md) for your business
+- Request custom commercial features
+- Send us a device for testing
+
+We maintain a collection of Android devices for compatibility testing, but new boxes and sticks appear every month. Your contribution helps us ensure Slideshow runs smoothly on as many devices as possible.
+
+## Buy Us a Coffee
+
+If you’d like to make a small direct contribution, you can do so through [**ko-fi.com/slideshow**](https://ko-fi.com/slideshow). Every coffee helps us dedicate more time to improving the app and adding new features. Thank you for supporting our software!

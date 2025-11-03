@@ -4,6 +4,8 @@ icon: material/bug-outline
 
 # Troubleshooting
 
+If you encounter an issue with the **Slideshow app**, this page will help you diagnose and resolve it.
+
 ## Logs
 
 While running, Slideshow is writing information about changes and problems into log files saved in the device’s internal memory. You can view these log files via web interface → menu `Information` → `Logs`. There are entries with timestamp and description of what Slideshow was doing or details of a problem.
@@ -12,18 +14,34 @@ As a default, the log file with the newest entries is displayed. If you want to 
 
 ## Bug report
 
-Via Slideshow’s web interface → menu `Information` → `Bug report` or via on-screen menu → `Bug Report`, you can submit a bug report which will be sent directly to Slideshow’s developers. Together with each bug report, logs, configuration and device details are sent as well, in order to gather as many details about the problem as possible (see privacy policy for more details).
+If you encounter a problem, the quickest way to get help is to send a **bug report** directly from the app.
 
-After receiving the bug report, we will carefully review it within a few days and reply to the email address provided. Please check your spam folder if you don’t receive a reply from us within 5 days.
+You can do this in two ways:
 
-!!! tip "Prefer bug report"
-	If you encounter any problem with Slideshow app, sending a bug report is the preferred way of reporting a problem to us, as we can directly see what settings and configuration you used when the problem occurred.
+- **Via web interface:** Menu `Information` → `Bug Report`
+- **Via on-screen menu:** Menu → `Bug Report`
 
-## Remove application data
+Each bug report automatically includes:
 
-If you would like to delete all application data and configuration, two steps are necessary:
+- Log files (recent activity and errors)
+- App configuration details
+- Basic device information (Android version, hardware model...)
 
-1. Uninstall Slideshow application from Android operating system
-2. Delete folder `slideshow` from the internal storage of your device
+These details help our developers understand and reproduce the problem more effectively.  For more information, see our [Privacy Policy](privacy_policy.md) regarding the data included in reports.
 
-This can be useful if you would like to completely reinstall (reset) Slideshow app. If you install Slideshow app again after performing the two steps above, you will start with the default (clean) configuration and settings, without any media files.
+After you submit a report, we review it within a few days and a reply will be sent to the email address you provide. Please check your spam folder if you haven’t received a response within 5 days.
+
+!!! tip "Preferred way to report issues"
+    Sending a **bug report from within the app** is the most effective way to contact us — it automatically includes the technical details we need to resolve your issue faster.
+
+## Remove application data (Full Reset)
+
+If you’d like to completely reset Slideshow — for example, before setting it up again from the scratch — follow these steps:
+
+1. Uninstall Slideshow application from your Android device
+2. Using a file manager, delete folder `slideshow` from your device’s internal storage
+
+After these steps, all configurations, playlists, and media files will be removed. When you reinstall Slideshow, it will start fresh with the **default settings and empty configuration**, just like the first installation.
+
+!!! warning "All data will be lost"
+    This process permanently deletes all local data, including media files, playlists, and settings. Be sure to back up anything you want to keep before performing a full reset.
