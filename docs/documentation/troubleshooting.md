@@ -27,7 +27,7 @@ Each bug report automatically includes:
 - App configuration details
 - Basic device information (Android version, hardware model...)
 
-These details help our developers understand and reproduce the problem more effectively.  For more information, see our [Privacy Policy](privacy_policy.md) regarding the data included in reports.
+These details help our developers understand and reproduce the problem more effectively.  For more information, see our [Privacy Policy](privacy-policy.md) regarding the data included in reports.
 
 After you submit a report, we review it within a few days and a reply will be sent to the email address you provide. Please check your spam folder if you haven’t received a response within 5 days.
 

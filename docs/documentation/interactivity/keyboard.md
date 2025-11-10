@@ -2,7 +2,7 @@
 
 It is possible to assign various actions to pressing different keys on a USB keyboard connected to the Android device or on a remote control (if the particular Android device has one). This way it is possible to fully customize remote control for interactively controlling playback in Slideshow.
 
-Keyboard shortcuts can be modified via the web interface → menu `Settings` → `Key mapping`. You can back up and restore the modified shortcuts using [XML configuration backup](../configuration/configuration_backup_restore.md) (section Key mapping).
+Keyboard shortcuts can be modified via the [web interface](../network-access/web-interface.md) → menu `Settings` → `Key mapping`. You can back up and restore the modified shortcuts using [XML configuration backup](../configuration/configuration-backup-restore.md) (section Key mapping).
 
 To disable all keyboard shortcuts, navigate to the web interface → menu `Setting` → `Device settings` and check `Disable keyboard`.
 

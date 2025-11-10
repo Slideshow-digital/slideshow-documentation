@@ -1,9 +1,8 @@
-
 # Localization
 
-You can change the language of Slideshow’s user interface and web interface either through web interface → menu `Settings` → `Device settings` → `Language` or through on-screen menu → `Basic settings` → `Language`.
+Slideshow supports multiple languages for both its on-screen user interface and [web interface](../network-access/web-interface.md). You can change the language either through web interface → menu `Settings` → `Device settings` → `Language` or through on-screen menu → `Basic settings` → `Language`.
 
-This choice of language has no effect on the language of date/time and weather forecast displayed on the screen (names of days of week and months can be displayed). You can select this language separately via web interface → menu `Content` → `Edit`. The list of supported languages for date and weather panel depends on your Android image and usually contains 100+ languages on newer versions of Android.
+The language used for date, time, and weather information (such as day of week and month names) can be configured separately. To change it, go through web interface → menu `Content` → `Edit`. The list of available languages depends on your Android system version. Modern Android devices typically support 100+ languages, ensuring full localization for most regions.
 
 ## Currently supported languages
 
@@ -18,15 +17,25 @@ This choice of language has no effect on the language of date/time and weather f
 * Japanese (thanks to Takashi Yamaguchi)
 * Korean (thanks to Seok Gyo Seo)
 * Polish (thanks to Piotr Bujalski)
-* Portugese (thanks to Jorge Soares)
+* Portuguese (thanks to Jorge Soares)
 * Russian (thanks to Sergej Karpovič)
 * Slovak
 * Slovenian (thanks to @AdmiralStipe)
 * Spanish (thanks to Rafael García)
 * Turkish (thanks to İlker Berberler) 
 
-## Adding new language
+We’re incredibly grateful to everyone who has helped localize the app so far.
 
-If you want to add your language, either create a pull request on our [GitHub repository](https://github.com/milan-fabian/slideshow-localization), or send us this [Excel file](https://github.com/milan-fabian/slideshow-localization/raw/master/backend/localization.xlsx) with added translation. Either way, we will be very happy to add your translation to the next version of Slideshow, of course with proper credits to you.
+## Adding a new language
 
-If you use a translation service (such as Google Translate) as a help, please review every translation manually afterward. Such services tend to break some formatting, and the quality of the translation without manual check is not sufficient.
+Want to see your language listed here? Contribute a translation, and we’ll include your name (or nickname) in the credits!
+
+If you want to add your language, either create a pull request on our [GitHub repository](https://github.com/milan-fabian/slideshow-localization), or send us this [Excel file](https://github.com/milan-fabian/slideshow-localization/raw/master/backend/localization.xlsx) with an added translation.
+
+To keep translations consistent and accurate, please follow these best practices:
+
+- Review your translation manually, especially if you use tools like Google Translate or DeepL for help — automated services can alter formatting or context.
+- Preserve placeholders (like `{0}`, `%s`, or HTML tags) exactly as they are in the source.
+- Keep button labels short to fit on-screen.
+- Use consistent terminology for recurring words (e.g., "Playlist", "Layout", "Device").
+- If your language has multiple dialects or regional variants, use the most widely understood form.

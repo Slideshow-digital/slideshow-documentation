@@ -1,0 +1,1049 @@
+openapi: 3.0.1
+info:
+  title: Slideshow API
+  description: 'This is description of local HTTP REST API available in Slideshow - Digital Signage player'
+  contact:
+    email: slideshow@slideshow.digital
+  version: 4.11.5
+externalDocs:
+  description: Find out more about Slideshow - Digital Signage player
+  url: 'https://slideshow.digital'
+servers:
+  - url: '{URL}/'
+    variables:
+      URL:
+        default: http://192.168.1.100:8080
+        description: Sample URL of Slideshow's web interface
+tags:
+  - name: display
+    description: Endpoints covering content displayed on screen.
+  - name: audio
+    description: Endpoints covering audio
+  - name: device
+    description: Endpoints covering device information
+  - name: deviceOwner
+    description: Endpoints covering setting device owner and lock task mode. <b>Experimental and only for experienced users</b>, might lead to locking the device entirelly.
+  - name: faceDetection
+    description: Endpoints covering statistics of face detection from camera. Face detection has to be set up and turned on for these endpoints to return valid data.
+  - name: synchronization
+    description: Endpoints covering file synchronization from external servers.
+paths:
+  /ajax/zones:
+    get:
+      tags:
+        - display
+      summary: Get list of zones in currently displayed screen layout
+      description: Returns list of zones as a map, where key is ID of the zone and value is name of the zone. Audio playlist is returned as a special item in the response, with key `audio`.
+      operationId: getZones
+      responses:
+        '200':
+          description: Success - returns list of zones - ID and name
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  result:
+                    type: object
+                    additionalProperties:
+                      type: string
+              examples:
+                Sample:
+                  value: "{\n\t\"success\": true,\n\t\"result\": {\n\t\t\"1\": \"Main zone\",\n\t\t\"2\": \"RSS zone\",\n\t\t\"2\": \"Weather zone\",\n\t\t\"audio\": \"Audio playlist\"\n\t}\n}"
+      security:
+        - basicAuth: []
+  /ajax/showFile:
+    post:
+      tags:
+        - display
+      summary: Display single file on the screen
+      description: Display single file on the screen in selected (or main) zone, overwriting the current playlist.
+      operationId: getShowfile
+      parameters:
+        - name: file
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Path to file (within Slideshow) which should be displayed
+          examples:
+            image.jpg:
+              summary: File "image.jpg" 
+              value: image.jpg
+            nested-file.mp3:
+              summary: File "nested/file.mp3" 
+              value: "nested/file.mp3"
+        - name: length
+          in: query
+          required: true
+          schema:
+            type: integer
+          description: Length of display in seconds  
+        - name: zoneId
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: ID of the zone in which the file should be displayed, or "audio" for audio playlist (default is main zone) 
+        - name: zoneName
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Name of the zone in which the file should be displayed (default is main zone) 
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
+  /ajax/showSentHtml:
+    post:
+      tags:
+        - display
+      summary: Displays HTML content on the screen
+      description: Displays sent HTML content on the screen, overwriting the current playlist.
+      operationId: postShowsenthtml
+      parameters:
+        - name: html
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Path to file (within Slideshow) which should be displayed
+          examples:
+            sample:
+              summary: Sample HTML
+              value: '<b>Hello</b> <span style="color: red">world</span>'
+        - name: length
+          in: query
+          required: true
+          schema:
+            type: integer
+          description: Length of display in seconds
+        - name: zoneId
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: ID of the zone in which the file should be displayed (default is main zone) 
+        - name: zoneName
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Name of the zone in which the file should be displayed (default is main zone) 
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
+  /ajax/showStream:
+    post:
+      tags:
+        - display
+      summary: Displays video stream on the screen
+      description: Displays network video stream on the screen, overwriting the current playlist.
+      operationId: postShowstream
+      parameters:
+        - name: address
+          in: query
+          required: true
+          schema:
+            type: string
+          description: URL address of the video stream
+        - name: duration
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: Duration of display in seconds
+        - name: zoneId
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: ID of the zone in which the stream should be displayed (default is main zone) 
+        - name: zoneName
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Name of the zone in which the stream should be displayed (default is main zone) 
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
+  /ajax/next:
+    put:
+      tags:
+        - display
+      summary: Play next file
+      description: Play next file from the current playlist.
+      operationId: getNext
+      parameters:
+        - name: zoneId
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: ID of the zone in which the file should be displayed, or "audio" for audio playlist (default is main zone) 
+        - name: zoneName
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Name of the zone in which the file should be displayed (default is main zone) 
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []  
+  /ajax/previous:
+    put:
+      tags:
+        - display
+      summary: Play previous file
+      description: Play previous file from the current playlist. Works only with content type "Files alphabetically" (not "Files randomly").
+      operationId: getPrevious
+      parameters:
+        - name: zoneId
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: ID of the zone in which the file should be displayed, or "audio" for audio playlist (default is main zone) 
+        - name: zoneName
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Name of the zone in which the file should be displayed (default is main zone) 
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []  
+  /ajax/audio/next:
+    put:
+      tags:
+        - audio
+      summary: Play next audio file
+      description: Play next file from the current audio playlist. If no audio playlist is active, nothing happens.
+      operationId: getAudioNext
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []  
+  /ajax/beep:
+    put:
+      tags:
+        - audio
+      summary: Play beep tone
+      description: Play beep tone on the device. Can be used for testing audio outputs and/or checking volume.
+      operationId: putAudioBeep
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []  
+  /ajax/fullscreen/toggle:
+    put:
+      tags:
+        - display
+      summary: Toggle fullscreen display
+      description: Toggle between fullscreen and non-fullscreen display of the main zone. Usable only if there is more than one zone on the screen.
+      operationId: toggleFullscreen
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []  
+  /ajax/playlist/set:
+    put:
+      tags:
+        - display
+      summary: Switch to a particular playlist
+      description: Switch to playing particular playlist in a zone, overwriting the current playlist. One of playlistId, playlistNumber, playlistName parameters has to be entered.
+      operationId: setPlaylist
+      parameters:
+        - name: zoneId
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: ID of the zone in which the playlist should be played, or "audio" for audio playlist (default is main zone)
+        - name: zoneName
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Name of the zone in which the playlist should be played (default is main zone) 
+        - name: playlistId
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: ID of the playlist which should be used
+        - name: playlistNumber
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: Number of the playlist which should be used
+        - name: playlistName
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Name of the playlist which should be used
+        - name: length
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: Length of display in seconds. If not entered, the playlist will be played based on its playlist action, or until unset manually or the layout is changed.
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
+  /ajax/playlist/clear:
+    put:
+      tags:
+        - display
+      summary: Clear set playlist
+      description: Clear manually changed playlist, returning to the playlist based on the schedule.
+      operationId: clearPlaylist
+      parameters:
+        - name: zoneId
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: ID of the zone in which the playlist should be cleared, or "audio" for audio playlist (default is main zone) 
+        - name: zoneName
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Name of the zone in which the playlist should be cleared (default is main zone) 
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
+  /ajax/layout/set:
+    put:
+      tags:
+        - display
+      summary: Switch to a particular screen layout
+      description: Switch to displaying screen layout, overwriting the current screen layout. Either layoutId or layoutName has to be set.
+      operationId: setLayout
+      parameters:
+        - name: layoutId
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: ID of the screen layout to display.
+        - name: layoutName
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Name of the screen layout to display.
+        - name: length
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: Length of display in seconds. If not entered, the layout will be set until unset manually or the app is restarted.
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
+  /ajax/layout/clear:
+    put:
+      tags:
+        - display
+      summary: Clear set screen layout
+      description: Clear manualy changed screen layout, returning to the screen layout based on the schedule.
+      operationId: clearLayout
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
+  /ajax/pause:
+    put:
+      tags:
+        - display
+      summary: Pause playback in zone
+      description: Pauses playback in a zone. Use resume operation to continue playback.
+      operationId: pause
+      parameters:
+        - name: zoneId
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: ID of the zone in which the playback should be paused, or "audio" for audio playlist (default is main zone)
+        - name: zoneName
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Name of the zone in which the playback should be paused (default is main zone) 
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
+  /ajax/resume:
+    put:
+      tags:
+        - display
+      summary: Resume playback in zone
+      description: Resumes playback in a zone. To be used after pause operation.
+      operationId: resume
+      parameters:
+        - name: zoneId
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: ID of the zone in which the playback should be resumed, or "audio" for audio playlist (default is main zone)
+        - name: zoneName
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Name of the zone in which the playback should be resumed (default is main zone) 
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
+  /ajax/volume/set:
+    put:
+      tags:
+        - audio
+      summary: Set audio volume
+      description: Set global audio volume on the device. Either vol or volPercentage parameter has to be entered.
+      operationId: setVolume
+      parameters:
+        - name: vol
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: Volume in range from 0 to 15
+        - name: volPercentage
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: Volume in range from 0 to 100
+      responses:
+        '200':
+          description: Success - returns volume
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  result:
+                    type: object
+                    properties:
+                      currentVolume:
+                        type: integer
+              examples:
+                Sample:
+                  value: "{\n\t\"success\": true,\n\t\"result\": {\n\t\t\"currentVolume\": 100\n\t}\n}"
+      security:
+        - basicAuth: []  
+  /ajax/volume/get:
+    get:
+      tags:
+        - audio
+      summary: Get audio volume
+      description: Returns current global audio volume of the device.
+      operationId: getVolume
+      responses:
+        '200':
+          description: Success - returns volume
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  result:
+                    type: object
+                    properties:
+                      currentVolume:
+                        type: integer
+              examples:
+                Sample:
+                  value: "{\n\t\"success\": true,\n\t\"result\": {\n\t\t\"currentVolume\": 100\n\t}\n}"
+      security:
+        - basicAuth: []  
+  /ajax/reload:
+    put:
+      tags:
+        - device
+      summary: Reload the app on device
+      description: Triggers reload (restart) of the app on the device
+      operationId: reload
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []  
+  /ajax/reboot:
+    put:
+      tags:
+        - device
+      summary: Reboot entire device
+      description: Triggers reboot of the entire device (requires rooted device)
+      operationId: reboot
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []  
+  /ajax/shell:
+    post:
+      tags:
+        - device
+      summary: Execute shell command
+      description: Executes shell (console) command on the Android device and returns result
+      operationId: shell
+      parameters:
+        - name: command
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Command to execute
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  result:
+                    type: object
+                    properties:
+                      result:
+                        type: number
+                        description: Command result code
+                      stdout:
+                        type: string
+                        description: Standard output
+                      stderr:
+                        type: string
+                        description: Error output
+              examples:
+                Sample:
+                  value: "{\n\t\"success\": true,\n\t\"result\": {\n\t\t\"result\": \"0\",\n\t\t\"stdout\": \"output\",\n\t\t\"stderr\": \"\"\n\t}\n}"
+      security:
+        - basicAuth: []  
+  /ajax/action:
+    put:
+      tags:
+        - device
+      summary: Execute action
+      description: Executes one of the available actions on the device (see code parameter)
+      operationId: action
+      parameters:
+        - name: code
+          in: query
+          required: true
+          schema:
+            type: string
+            enum: [OPEN_LEFT_MENU, OPEN_RIGHT_MENU, SHOW_INFO, SHOW_HELP, SHOW_BASIC_SETTINGS, SHOW_ADVANCED_SETTINGS, SHOW_ANDROID_WIFI_SETTINGS, SHOW_ANDROID_DISPLAY_SETTINGS]
+          description: Action to execute
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []  
+  /ajax/screenshot:
+    get:
+      tags:
+        - device
+      summary: Get screenshot from the device
+      description: Returns screenshot of the current screen, as an image encoded in Base64
+      operationId: screenshot
+      responses:
+        '200':
+          description: Success - returns the screenshot
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  result:
+                    type: object
+                    properties:
+                      data:
+                        type: string
+                        format: byte
+                        description: Base64 encoded image data
+              examples:
+                Sample:
+                  value: "{\n\t\"success\": true,\n\t\"result\": {\n\t\t\"data\": \"Base64_data\"\n\t}\n}"
+      security:
+        - basicAuth: []  
+  /ajax/deviceInfo:
+    get:
+      tags:
+        - device
+      summary: Get information about the device
+      description: Returns basic information about the device on which Slideshow is running and its status.
+      operationId: getDeviceInfo
+      responses:
+        '200':
+          description: Success - returns device information
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  deviceId:
+                    type: string
+                    description: ID of the device
+                  androidVersion:
+                    type: string
+                    description: Version of Android
+                  macAddress:
+                    type: string
+                    description: MAC address of the device's network interface
+                  uptime:
+                    type: integer
+                    description: Timestamp when the device last booted up (in milliseconds)
+                  appUptime:
+                    type: integer
+                    description: Timestamp when the app last started (in milliseconds)
+                  currentTime:
+                    type: integer
+                    description: Current device time as timestamp (in milliseconds)
+                  deviceName:
+                    type: string
+                    description: Name of the device in Slideshow
+                  softwareVersion:
+                    type: string
+                    description: Version of Slideshow
+                  hardwareModel:
+                    type: string
+                    description: Model of the device running Slideshow
+                  storageSpaceFree:
+                    type: integer
+                    description: Free space in the internal storage (in bytes)
+                  storageSpaceTotal:
+                    type: integer
+                    description: Total space of the internal storage (in bytes)
+                  lastDisplayedFile:
+                    type: string
+                    description: Path to the last displayed file in the main zone
+                  ipAddressInternal:
+                    type: string
+                    description: IP address of the device's network interface (usually LAN address)
+                  timeZone:
+                    type: string
+                    description: Time zone set in the Android settings
+                  deviceOwner:
+                    type: boolean
+                    description: Whether Slideshow app is set as a device owner
+                  deviceAdmin:
+                    type: boolean
+                    description: Whether Slideshow app is set as a device admin      
+                  lockTaskApplication:
+                    type: boolean
+                    description: Whether lock task application is set
+                  lockTaskMode:
+                    type: boolean
+                    description: Whether the device is in a lock task mode right now                        
+                  rooted:
+                    type: boolean
+                    description: Whether the device is rooted and app has root access allowed               
+                  currentVolume:
+                    type: integer
+                    description: Current volume of the device in percentage
+                  currentPlaylist:
+                    type: string
+                    description: Name of the current playlist in the main zone on the screen   
+                  currentScreenLayout:
+                    type: string
+                    description: Name of the currently displayed screen layout                     
+              examples:
+                Sample:
+                  value: "{\n\t\"deviceId\": \"ABCDEFGH\",\n\t\"androidVersion\": \"7.1.2\",\n\t\"macAddress\": \"01:02:03:04:05:06\",\n\t\"uptime\": 1621085003784,\n\t\"appUptime\": 1621085023891,\n\t\"currentTime\": 1621085589107,\n\t\"deviceName\": \"Test device\",\n\t\"softwareVersion\": \"4.10.11\",\n\t\"deviceOwner\": false,\n\t\"deviceAdmin\": false,\n\t\"lockTaskApplication\": false,\n\t\"lockTaskMode\": false,\n\t\"rooted\": true,\n\t\"ipAddressInternal\": \"192.168.1.10\",\n\t\"lastDisplayedFile\": \"image.jpg\",\n\t\"storageSpaceTotal\": 4716494848,\n\t\"storageSpaceFree\": 2232582144,\n\t\"timeZone\": \"Europe/Bratislava\",\n\t\"hardwareModel\": \"rk3288\",\n\t\"currentVolume\": 100,\n\t\"currentPlaylist\": \"All files\",\n\t\"currentScreenLayout\": \"Default layout\"\n}"
+      security:
+        - basicAuth: []    
+  /ajax/displayInfo:
+    get:
+      tags:
+        - device
+      summary: Get information about the displays
+      description: Returns basic information about all displays that this app is actively using.
+      operationId: getDisplayInfo
+      responses:
+        '200':
+          description: Success - returns display information
+      security:
+        - basicAuth: []  
+                      
+  /ajax/deviceOwner/deviceOwnerSet:
+    put:
+      tags:
+        - deviceOwner
+      summary: Sets Slideshow as a device owner
+      operationId: deviceOwnerSet
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
+  /ajax/deviceOwner/deviceOwnerUnset:
+    put:
+      tags:
+        - deviceOwner
+      summary: Unsets Slideshow as a device owner
+      operationId: deviceOwnerUnset
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
+  /ajax/deviceOwner/deviceAdminUnset:
+    put:
+      tags:
+        - deviceOwner
+      summary: Unsets Slideshow as a device admin
+      operationId: deviceAdminUnset
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: [] 
+  /ajax/deviceOwner/lockTaskPackagesSet:
+    put:
+      tags:
+        - deviceOwner
+      summary: Set lock task application
+      operationId: lockTaskPackagesSet
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
+  /ajax/deviceOwner/lockTaskStart:
+    put:
+      tags:
+        - deviceOwner
+      summary: Start lock task mode
+      operationId: lockTaskStart
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
+  /ajax/deviceOwner/lockTaskStop:
+    put:
+      tags:
+        - deviceOwner
+      summary: Stop lock task mode
+      operationId: lockTaskStop
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: [] 
+  /ajax/faceDetection/last:
+    get:
+      tags:
+        - faceDetection
+      summary: Get statistics from the last face detection run
+      description: Returns result of face detection processing of the last image taken from camera
+      operationId: faceDetectionLast
+      responses:
+        '200':
+          description: Success - returns statistics
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  result:
+                    type: object
+                    properties:
+                      time:
+                        type: string
+                      facesCount:
+                        type: integer
+                      largestFace:
+                        type: integer  
+                      eyesOpened:
+                        type: number
+              examples:
+                Sample:
+                  value: "{\n\t\"success\": true,\n\t\"result\": {\n\t\t\"time\": \"15:25:10.780\",\n\t\t\"facesCount\": 5,\n\t\t\"largestFace\": 12,\n\t\t\"eyesOpened\": 8.21\n\t}\n}"
+      security:
+        - basicAuth: []
+  /ajax/faceDetection/previous:
+    get:
+      tags:
+        - faceDetection
+      summary: Get statistics from the previous face detection run
+      description: Returns result of face detection processing of the previous image taken from camera
+      operationId: faceDetectionPrevious
+      parameters:
+        - name: index
+          in: query
+          required: true
+          schema:
+            type: integer
+          description: Index between 0 and 59
+      responses:
+        '200':
+          description: Success - returns statistics
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  result:
+                    type: object
+                    properties:
+                      time:
+                        type: string
+                      facesCount:
+                        type: integer
+                      largestFace:
+                        type: integer  
+                      eyesOpened:
+                        type: number
+              examples:
+                Sample:
+                  value: "{\n\t\"success\": true,\n\t\"result\": {\n\t\t\"time\": \"15:25:10.780\",\n\t\t\"facesCount\": 5,\n\t\t\"largestFace\": 12,\n\t\t\"eyesOpened\": 8.21\n\t}\n}"
+      security:
+        - basicAuth: []
+  /ajax/faceDetection/statistics:
+    get:
+      tags:
+        - faceDetection
+      summary: Get min/max/average from multiple face detection runs
+      description: Returns calculated results of face detection processing of multiple images taken from camera
+      operationId: faceDetectionStatistics
+      parameters:
+        - name: fromIndex
+          in: query
+          required: true
+          schema:
+            type: integer
+          description: Start index (inclusive)
+        - name: toIndex
+          in: query
+          required: true
+          schema:
+            type: integer
+          description: End index (inclusive)
+        - name: type
+          in: query
+          required: true
+          schema:
+            type: string
+            enum: [average, min, max]
+      responses:
+        '200':
+          description: Success - returns statistics
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  result:
+                    type: object
+                    properties:
+                      time:
+                        type: string
+                      facesCount:
+                        type: integer
+                      largestFace:
+                        type: integer  
+                      eyesOpened:
+                        type: number
+              examples:
+                Sample:
+                  value: "{\n\t\"success\": true,\n\t\"result\": {\n\t\t\"facesCount\": 5,\n\t\t\"largestFace\": 12,\n\t\t\"eyesOpened\": 8.21\n\t}\n}"
+      security:
+        - basicAuth: []
+  /ajax/faceDetection/lastImage:
+    get:
+      tags:
+        - faceDetection
+      summary: Get the image from the last face detection run
+      description: Returns image from camera taken during the last face detection processing. The image is in SVG format, encoded using Base64. Valid only if the face detection is actually running.
+      operationId: faceDetectionLastImage
+      responses:
+        '200':
+          description: Success - returns the image data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  result:
+                    type: object
+                    properties:
+                      data:
+                        type: string
+                        format: byte
+                        description: Base64 encoded image data
+              examples:
+                Sample:
+                  value: "{\n\t\"success\": true,\n\t\"result\": {\n\t\t\"data\": \"Base64_data\"\n\t}\n}"
+      security:
+        - basicAuth: []  
+  /ajax/synchronize:
+    post:
+      tags:
+        - synchronization
+      summary: Trigger file synchronization from external server
+      description: Works the same as triggering a synchronization via Slideshow's web interface - menu Tools - File synchronization. Can be used with HTTP, HTTPS, FTP and WebDAV protocols. The actual synchronization is asynchronous, this method returns success immediately after the synchronization is triggered. Check the logs of the app to find out result of the synchronization.
+      operationId: synchronize
+      parameters:
+        - name: url
+          in: query
+          required: true
+          schema:
+            type: string
+          description: URL address on the remote server from where to synchronize file(s). May include username and password.
+        - name: method
+          in: query
+          required: true
+          schema:
+            type: string
+            enum: [GET, POST, PUT]
+          description: Which HTTP method should be used for the request to remote server.
+        - name: target
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Target name of the file or folder in Slideshow's internal memory.
+        - name: clearFolder
+          in: query
+          required: true
+          schema:
+            type: boolean
+          description: Whether to delete old files from the target folder after each synchronization (valid only for Google Drive, Dropbox, WebDAV or ZIP files).
+      responses:
+        '200':
+          description: Success - synchronization was triggered asynchronously
+      security:
+        - basicAuth: []
+  /ajax/synchronize/last:
+    get:
+      tags:
+        - synchronization
+      summary: Returns information about last file synchronizations
+      description: Returns information about five most recent file synchronizations pefrormed since the last time the app started.
+      operationId: synchronizeLast
+      responses:
+        '200':
+          description: Success - returns statistics
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  result:
+                    type: object
+                    properties:
+                      lastStatistics:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            source:
+                              type: string
+                            target:
+                              type: string
+                            started:
+                              type: string
+                              format: date-time
+                            finished:
+                              type: string
+                              format: date-time
+                            startMethod:
+                              type: string
+                              enum: [MANUAL, SCHEDULED, API]
+                            filesDownloaded:
+                              type: integer
+                            filesFailed:
+                              type: integer
+                            filesSkipped:
+                              type: integer
+                            filesNotChanged:
+                              type: integer
+              examples:
+                Sample:
+                  value: "{\n\t\"success\": true,\n\t\"result\": {\n\t\t\"lastStatistics\": [\n\t\t\t{\n\t\t\t\t\"source\": \"http://example.com/folder/file.zip\",\n\t\t\t\t\"target\": \"/folder\",\n\t\t\t\t\"started\": \"2023-03-15T08:10:52.733Z\",\n\t\t\t\t\"finished\": \"2023-03-15T08:10:52.814Z\",\n\t\t\t\t\"startMethod\": \"MANUAL\",\n\t\t\t\t\"filesDownloaded\": 1,\n\t\t\t\t\"filesFailed\": 0,\n\t\t\t\t\"filesSkipped\": 0,\n\t\t\t\t\"filesNotChanged\": 0\n\t\t\t}\n\t\t]\n\t}\n}"
+      security:
+        - basicAuth: []        
+  /ajax/screensaver/activate:
+    put:
+      tags:
+        - screensaver
+      summary: Activate screensaver
+      description: Activate screensaver layout, if it is set up
+      operationId: activateScreensaver
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: [] 
+  /ajax/screensaver/deactivate:
+    put:
+      tags:
+        - screensaver
+      summary: Deactivate screensaver
+      description: Deactivate screensaver layout, if it is active at the moment
+      operationId: deactivateScreensaver
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: [] 
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic

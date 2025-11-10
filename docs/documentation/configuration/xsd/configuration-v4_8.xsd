@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:tns="http://slideshow.digital/configuration/v4_8"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+    elementFormDefault="qualified" targetNamespace="http://slideshow.digital/configuration/v4_8">
+
+    <xs:simpleType name="Float50to100">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="-50" />
+            <xs:maxInclusive value="100" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Integer0to23">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="23" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Integer0to6">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="6" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="StringColor">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="#([A-Fa-f0-9]{8}|[A-Fa-f0-9]{6})" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="UserRoleType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ADMIN" />
+            <xs:enumeration value="MANAGER" />
+            <xs:enumeration value="USER" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="MusicTypeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NONE" />
+            <xs:enumeration value="VIDEO" />
+            <xs:enumeration value="AUDIO" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PlaylistActionType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PLAY_ONCE" />
+            <xs:enumeration value="PLAY_ONCE_MOVE_NEXT" />
+            <xs:enumeration value="LOOP_UNTIL_CHANGE" />
+            <xs:enumeration value="LOOP_INDEFINITELY" />
+            <xs:enumeration value="LOOP_UNTIL_TIMEOUT" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ItemTypeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="IMAGE" />
+            <xs:enumeration value="STREAM" />
+            <xs:enumeration value="RANDOM" />
+            <xs:enumeration value="ALPHABETICALLY" />
+            <xs:enumeration value="DATE_TIME" />
+            <xs:enumeration value="WEATHER" />
+            <xs:enumeration value="RSS" />
+            <xs:enumeration value="TEXT" />
+            <xs:enumeration value="NOTHING" />
+            <xs:enumeration value="NAME_DAY" />
+            <xs:enumeration value="VIDEO_INPUT" />
+            <xs:enumeration value="YOUTUBE" />
+            <xs:enumeration value="WIDGET" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="AnimationTypeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NONE" />
+            <xs:enumeration value="CROSSFADE" />
+            <xs:enumeration value="CROSSFADE_TRUE" />
+            <xs:enumeration value="TO_RIGHT" />
+            <xs:enumeration value="TO_LEFT" />
+            <xs:enumeration value="TO_TOP" />
+            <xs:enumeration value="TO_BOTTOM" />
+            <xs:enumeration value="SHRINK" />
+            <xs:enumeration value="ROTATE_SHRINK" />
+            <xs:enumeration value="ENLARGE_CROSSFADE" />
+            <xs:enumeration value="HIDE" />
+            <xs:enumeration value="EXPLODE" />
+            <xs:enumeration value="FOLD" />
+            <xs:enumeration value="VERTICAL_FLIP" />
+            <xs:enumeration value="HORIZONTAL_FLIP" />
+            <xs:enumeration value="CUBE_OUTSIDE" />
+            <xs:enumeration value="CUBE_OUTSIDE_RANDOM" />
+            <xs:enumeration value="CUBE_INSIDE" />
+            <xs:enumeration value="CUBE_INSIDE_RANDOM" />
+            <xs:enumeration value="RANDOM" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="InfoType">
+        <xs:sequence>
+            <xs:element name="version" minOccurs="0" type="xs:string" />
+            <xs:element name="exported" minOccurs="0" type="xs:dateTime" />
+            <xs:element name="description" minOccurs="0" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="SettingType">
+        <xs:attribute name="key" type="xs:string" use="required" />
+        <xs:attribute name="value" type="xs:string" use="required" />
+    </xs:complexType>
+    <xs:complexType name="SettingsType">
+        <xs:sequence>
+            <xs:element name="setting" maxOccurs="unbounded" minOccurs="0" type="tns:SettingType" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PropertyType">
+        <xs:attribute name="key" type="xs:string" use="required" />
+        <xs:attribute name="value" type="xs:string" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="ItemType">
+        <xs:sequence>
+            <xs:element name="property" maxOccurs="unbounded" minOccurs="0"
+                type="tns:PropertyType" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:long" use="required" />
+        <xs:attribute name="fileName" type="xs:string" use="required" />
+        <xs:attribute name="description" type="xs:string" use="required" />
+        <xs:attribute name="itemType" type="tns:ItemTypeType" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="ItemsType">
+        <xs:sequence>
+            <xs:element name="item" maxOccurs="unbounded" minOccurs="0" type="tns:ItemType" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ContentType">
+        <xs:attribute name="itemId" type="xs:long" use="required" />
+        <xs:attribute name="length" type="xs:int" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="ScheduleType" abstract="true">
+        <xs:attribute name="timeFrom" type="xs:time" use="required" />
+        <xs:attribute name="timeTo" type="xs:time" use="required" />
+        <xs:attribute name="monday" type="xs:boolean" use="required" />
+        <xs:attribute name="tuesday" type="xs:boolean" use="required" />
+        <xs:attribute name="wednesday" type="xs:boolean" use="required" />
+        <xs:attribute name="thursday" type="xs:boolean" use="required" />
+        <xs:attribute name="friday" type="xs:boolean" use="required" />
+        <xs:attribute name="saturday" type="xs:boolean" use="required" />
+        <xs:attribute name="sunday" type="xs:boolean" use="required" />
+        <xs:attribute name="dateFrom" type="xs:date" />
+        <xs:attribute name="dateTo" type="xs:date" />
+        <xs:attribute name="priority" type="xs:int" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="ScreenLayoutScheduleType">
+        <xs:complexContent>
+            <xs:extension base="tns:ScheduleType" />
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="PlaylistScheduleType">
+        <xs:complexContent>
+            <xs:extension base="tns:ScheduleType">
+                <xs:attribute name="playlistId" type="xs:long" use="required" />
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="PlaylistType">
+        <xs:sequence>
+            <xs:element name="content" maxOccurs="unbounded" minOccurs="0" type="tns:ContentType" />
+            <xs:element name="property" maxOccurs="unbounded" minOccurs="0"
+                type="tns:PropertyType" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:long" use="required" />
+        <xs:attribute name="name" type="xs:string" use="required" />
+        <xs:attribute name="number" type="xs:integer" />
+        <xs:attribute name="musicType" type="tns:MusicTypeType" use="required" />
+        <xs:attribute name="action" type="tns:PlaylistActionType" />
+    </xs:complexType>
+    <xs:complexType name="PlaylistsType">
+        <xs:sequence>
+            <xs:element name="playlist" maxOccurs="unbounded" minOccurs="0"
+                type="tns:PlaylistType" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PanelType">
+        <xs:sequence>
+            <xs:element name="schedule" maxOccurs="unbounded" minOccurs="0"
+                type="tns:PlaylistScheduleType" />
+            <xs:element name="property" maxOccurs="unbounded" minOccurs="0"
+                type="tns:PropertyType" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:integer" use="required" />
+        <xs:attribute name="name" type="xs:string" use="required" />
+        <xs:attribute name="backgroundColor" type="tns:StringColor" use="required" />
+        <xs:attribute name="x" type="tns:Float50to100" use="required" />
+        <xs:attribute name="y" type="tns:Float50to100" use="required" />
+        <xs:attribute name="width" type="tns:Float50to100" use="required" />
+        <xs:attribute name="height" type="tns:Float50to100" use="required" />
+        <xs:attribute name="mainPanel" type="xs:boolean" use="required" />
+        <xs:attribute name="animationType" type="tns:AnimationTypeType" use="required" />
+        <xs:attribute name="animationLength" type="xs:short" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="ScreenLayoutType">
+        <xs:sequence>
+            <xs:element name="panel" maxOccurs="unbounded" type="tns:PanelType" />
+            <xs:element name="schedule" maxOccurs="unbounded" minOccurs="0"
+                type="tns:ScreenLayoutScheduleType" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:integer" use="required" />
+        <xs:attribute name="name" type="xs:string" use="required" />
+        <xs:attribute name="rotation" type="xs:int" use="required" />
+        <xs:attribute name="interval" type="xs:decimal" />
+        <xs:attribute name="screensaver" type="xs:boolean" />
+        <xs:attribute name="powerOff" type="xs:boolean" />
+    </xs:complexType>
+    <xs:complexType name="ScreenLayoutsType">
+        <xs:sequence>
+            <xs:element name="screenLayout" maxOccurs="unbounded" minOccurs="0"
+                type="tns:ScreenLayoutType" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AudioScheduleType">
+        <xs:choice>
+            <xs:element name="schedule" maxOccurs="unbounded" minOccurs="0"
+                type="tns:PlaylistScheduleType" />
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="GrabberType">
+        <xs:attribute name="id" type="xs:long" use="required" />
+        <xs:attribute name="url" type="xs:string" use="required" />
+        <xs:attribute name="fileName" type="xs:string" use="required" />
+        <xs:attribute name="clearFolder" type="xs:boolean" use="required" />
+    </xs:complexType>
+    <xs:complexType name="GrabbersType">
+        <xs:sequence>
+            <xs:element name="download" maxOccurs="unbounded" minOccurs="0"
+                type="tns:GrabberType" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="UserType">
+        <xs:attribute name="id" type="xs:long" use="required" />
+        <xs:attribute name="name" type="xs:string" use="required" />
+        <xs:attribute name="username" type="xs:string" use="required" />
+        <xs:attribute name="password" type="xs:string" use="required" />
+        <xs:attribute name="role" type="tns:UserRoleType" use="required" />
+    </xs:complexType>
+    <xs:complexType name="UsersType">
+        <xs:sequence>
+            <xs:element name="user" maxOccurs="unbounded" minOccurs="0" type="tns:UserType" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="RssServerMessageType">
+        <xs:attribute name="id" type="xs:long" use="required" />
+        <xs:attribute name="title" type="xs:string" use="required" />
+        <xs:attribute name="description" type="xs:string" use="required" />
+    </xs:complexType>
+    <xs:complexType name="RssServerMessagesType">
+        <xs:sequence>
+            <xs:element name="rssMessage" maxOccurs="unbounded" minOccurs="0"
+                type="tns:RssServerMessageType" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="FileDataType">
+        <xs:sequence>
+            <xs:element name="property" maxOccurs="unbounded" minOccurs="0"
+                type="tns:PropertyType" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:long" use="required" />
+        <xs:attribute name="fileName" type="xs:string" use="required" />
+        <xs:attribute name="startWhen" type="xs:dateTime" />
+        <xs:attribute name="deleteWhen" type="xs:dateTime" />
+    </xs:complexType>
+    <xs:complexType name="FileDatasType">
+        <xs:sequence>
+            <xs:element name="fileData" maxOccurs="unbounded" minOccurs="0"
+                type="tns:FileDataType" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TriggersType">
+        <xs:attribute name="workspace" type="xs:string" use="required" />
+        <xs:attribute name="code" type="xs:string" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="KeyMappingsType">
+        <xs:sequence>
+            <xs:element name="keyMapping" maxOccurs="unbounded" minOccurs="0"
+                type="tns:KeyMappingType" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="KeyMappingType">
+        <xs:sequence>
+            <xs:element name="property" maxOccurs="unbounded" minOccurs="0"
+                type="tns:PropertyType" />
+        </xs:sequence>
+        <xs:attribute name="keyCode" type="xs:int" use="required" />
+        <xs:attribute name="actionDown" type="xs:string" use="required" />
+        <xs:attribute name="actionUp" type="xs:string" />
+    </xs:complexType>
+
+    <xs:complexType name="AdditionalDataType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="type" type="xs:string" use="required" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="AdditionalDatasType">
+        <xs:sequence>
+            <xs:element name="data" maxOccurs="unbounded" minOccurs="0"
+                type="tns:AdditionalDataType" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ConfigurationType">
+        <xs:sequence>
+            <xs:element name="info" minOccurs="0" type="tns:InfoType" />
+            <xs:element name="settings" minOccurs="0" type="tns:SettingsType" />
+            <xs:element name="items" minOccurs="0" type="tns:ItemsType" />
+            <xs:element name="playlists" minOccurs="0" type="tns:PlaylistsType" />
+            <xs:element name="screenLayouts" minOccurs="0" type="tns:ScreenLayoutsType" />
+            <xs:element name="audioSchedule" minOccurs="0" type="tns:AudioScheduleType" />
+            <xs:element name="downloads" minOccurs="0" type="tns:GrabbersType" />
+            <xs:element name="users" minOccurs="0" type="tns:UsersType" />
+            <xs:element name="rssMessages" minOccurs="0" type="tns:RssServerMessagesType" />
+            <xs:element name="fileDatas" minOccurs="0" type="tns:FileDatasType" />
+            <xs:element name="triggers" minOccurs="0" type="tns:TriggersType" />
+            <xs:element name="keyMappings" minOccurs="0" type="tns:KeyMappingsType" />
+            <xs:element name="additionalData" minOccurs="0" type="tns:AdditionalDatasType" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="configuration" type="tns:ConfigurationType" />
+</xs:schema>

@@ -235,7 +235,7 @@ Below, you can find a step-by-step tutorial of connecting Slideshow to HiveMQ Cl
 
 ### Setting up MQTT in Slideshow
 
-1. Open the [web interface](../network_access/web_interface.md) of Slideshow app, navigate to menu `Settings` → `Device settings` and adjust the following settings and click on Save
+1. Open the [web interface](../network-access/web-interface.md) of Slideshow app, navigate to menu `Settings` → `Device settings` and adjust the following settings and click on Save
     - MQTT server address: URL and port of the cluster, for example `xxxx.s1.eu.hivemq.cloud:8883`
     - MQTT username: from created credentials
     - MQTT password: from created credentials

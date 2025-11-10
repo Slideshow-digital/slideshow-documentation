@@ -3,6 +3,7 @@ site_description: Documentation for Slideshow - Digital Signage System
 copyright: Copyright © 2025 Milan Fabian
 theme:
   name: material
+  custom_dir: overrides
   favicon: assets/favicon.ico
   logo: assets/logo.svg
   palette:
@@ -28,6 +29,7 @@ markdown_extensions:
   - md_in_html
   - pymdownx.blocks.caption
   - attr_list
+  - footnotes
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -49,84 +51,94 @@ extra:
     - icon: fontawesome/solid/mug-hot
       link: https://ko-fi.com/slideshow
   generator: false
+
+extra_css:
+  - assets/extra.css
   
 nav:
+  - Home: index.md
+  - Get started: 
+    - get-started/index.md
+    - get-started/tutorial.md
+    - get-started/white-label.md
   - Documentation:
     - documentation/index.md
-    - documentation/tutorial.md
     - Playback:
-      - documentation/playback/supported_media_types.md
+      - documentation/playback/supported-media-types.md
       - Video playback:
-        - documentation/playback/video_playback/index.md
-        - documentation/playback/video_playback/4k_videos.md
-      - documentation/playback/web_pages.md
-      - documentation/playback/synchronized_playback.md
-      - documentation/playback/background_audio.md
+        - documentation/playback/video-playback/index.md
+        - documentation/playback/video-playback/4k-videos.md
+      - documentation/playback/web-pages.md
+      - documentation/playback/synchronized-playback.md
+      - documentation/playback/background-audio.md
       - Special content:
-        - documentation/playback/special_content/weather_forecast.md
-        - documentation/playback/special_content/rss_feeds.md
-        - documentation/playback/special_content/date_time.md
-        - documentation/playback/special_content/android_widgets.md
-        - documentation/playback/special_content/name_days.md
-        - documentation/playback/special_content/video_stream.md
-        - documentation/playback/special_content/video_input.md
-        - documentation/playback/special_content/audio_stream.md
+        - documentation/playback/special-content/weather-forecast.md
+        - documentation/playback/special-content/rss-feeds.md
+        - documentation/playback/special-content/date-time.md
+        - documentation/playback/special-content/android-widgets.md
+        - documentation/playback/special-content/name-days.md
+        - documentation/playback/special-content/video-stream.md
+        - documentation/playback/special-content/video-input.md
+        - documentation/playback/special-content/audio-stream.md
       - On-screen formatting:
-        - documentation/playback/on-screen_formatting/transitions_animations.md
-        - documentation/playback/on-screen_formatting/scaling_images.md
-        - documentation/playback/on-screen_formatting/fonts.md
-        - documentation/playback/on-screen_formatting/description_text.md
+        - documentation/playback/on-screen-formatting/transitions-animations.md
+        - documentation/playback/on-screen-formatting/scaling-images.md
+        - documentation/playback/on-screen-formatting/fonts.md
+        - documentation/playback/on-screen-formatting/description-text.md
     - Network access:
-      - documentation/network_access/web_interface.md
-      - documentation/network_access/file_upload.md
+      - documentation/network-access/web-interface.md
+      - documentation/network-access/file-upload.md
       - File synchronization:
-        - documentation/network_access/file_synchronization/index.md
-        - Google Drive: documentation/network_access/file_synchronization/file_synchronization_google_drive.md
-        - Dropbox: documentation/network_access/file_synchronization/file_synchronization_dropbox.md
-        - HTTP / FTP: documentation/network_access/file_synchronization/file_synchronization_http_ftp.md
-      - documentation/network_access/communication_between_devices.md
+        - documentation/network-access/file-synchronization/index.md
+        - Google Drive: documentation/network-access/file-synchronization/file-synchronization-google-drive.md
+        - Dropbox: documentation/network-access/file-synchronization/file-synchronization-dropbox.md
+        - HTTP / FTP: documentation/network-access/file-synchronization/file-synchronization-http-ftp.md
+      - documentation/network-access/communication-between-devices.md
+      - documentation/network-access/management-multiple-players.md
     - Configuration:
       - Playback configuration:
-        - documentation/configuration/playback_configuration/content_playlist.md
-        - documentation/configuration/playback_configuration/screen_layout.md
-        - documentation/configuration/playback_configuration/layout_playlist_scheduling.md
-        - documentation/configuration/playback_configuration/scheduled_file_deletion.md
-      - documentation/configuration/file_storage.md
+        - documentation/configuration/playback-configuration/content-playlist.md
+        - Screen layout:
+          - documentation/configuration/playback-configuration/screen-layout/index.md
+          - documentation/configuration/playback-configuration/screen-layout/inspiration-for-layouts.md
+        - documentation/configuration/playback-configuration/layout-playlist-scheduling.md
+        - documentation/configuration/playback-configuration/scheduled-file-deletion.md
+      - documentation/configuration/file-storage.md
       - documentation/configuration/settings.md
-      - documentation/configuration/automatic_startup.md
-      - documentation/configuration/screen_rotation.md
-      - documentation/configuration/remote_update.md
+      - documentation/configuration/automatic-startup.md
+      - documentation/configuration/screen-rotation.md
+      - documentation/configuration/remote-update.md
       - documentation/configuration/localization.md
-      - documentation/configuration/setup_csv.md
-      - Backup and restore: documentation/configuration/configuration_backup_restore.md
+      - documentation/configuration/setup-csv.md
+      - Backup and restore: documentation/configuration/configuration-backup-restore.md
     - Interactivity:
       - documentation/interactivity/keyboard.md
       - documentation/interactivity/triggers.md
-      - documentation/interactivity/face_detection.md
+      - documentation/interactivity/face-detection.md
     - Integration:
-      - documentation/integration/rest_api.md
-      - documentation/integration/serial_port.md
-      - documentation/integration/local_javascript_api.md
+      - documentation/integration/rest-api.md
+      - documentation/integration/serial-port.md
+      - documentation/integration/local-javascript-api.md
       - documentation/integration/mqtt.md
-      - documentation/integration/open_sound_control.md
+      - documentation/integration/open-sound-control.md
     - Hardware:
-      - documentation/hardware/suggested_hardware.md
+      - documentation/hardware/suggested-hardware.md
       - documentation/hardware/benchmarks.md
-      - documentation/hardware/root_on_android.md
+      - documentation/hardware/root-on-android.md
       - Hardware reviews:
-        - documentation/hardware/hardware_reviews/amazon_fire_tv_stick_4k_max.md
-        - documentation/hardware/hardware_reviews/mekotronics_r58x.md
-        - documentation/hardware/hardware_reviews/benq_st550k.md
-        - documentation/hardware/hardware_reviews/novastar_tb40.md
-        - documentation/hardware/hardware_reviews/intel_compute_stick.md
+        - documentation/hardware/hardware-reviews/amazon-fire-tv-stick-4k-max.md
+        - documentation/hardware/hardware-reviews/mekotronics-r58x.md
+        - documentation/hardware/hardware-reviews/benq-st550k.md
+        - documentation/hardware/hardware-reviews/novastar-tb40.md
+        - documentation/hardware/hardware-reviews/intel-compute-stick.md
     - Case studies:
-      - documentation/case_studies/art_hotel_kastiel.md
-      - documentation/case_studies/artwork_james_mcgrath.md
-      - documentation/case_studies/local_business_patriots.md
-      - documentation/case_studies/ormiston_horizon_academy.md
-    - documentation/release_notes.md
+      - documentation/case-studies/art-hotel-kastiel.md
+      - documentation/case-studies/artwork-james-mcgrath.md
+      - documentation/case-studies/local-business-patriots.md
+      - documentation/case-studies/ormiston-horizon-academy.md
+    - documentation/release-notes.md
     - documentation/troubleshooting.md
-    - documentation/support_us.md
-    - documentation/white_label.md
-    - documentation/privacy_policy.md
+    - documentation/support-us.md
+    - documentation/privacy-policy.md
+  - Contact us: contact-us/index.md
     

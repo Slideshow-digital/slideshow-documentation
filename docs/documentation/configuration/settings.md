@@ -4,7 +4,7 @@ General settings of Slideshow can be changed via the web interface → menu `Set
 
 A few of the settings are available also through the on-screen menu → `Basic settings`.
 
-You can back up and restore these settings using [XML configuration backup](configuration_backup_restore.md).
+You can back up and restore these settings using [XML configuration backup](configuration-backup-restore.md).
 
 ## List of available settings
 
