@@ -1,5 +1,8 @@
 ---
 icon: material/email
+hide:
+  - navigation
+  - toc
 ---
 
 # Contact us
@@ -8,7 +11,20 @@ Missing a feature? Interested in branding? Want to support the development? Let 
 
 If you found a bug, you can send us a [bug report](../documentation/troubleshooting.md#bug-report) directly from Slideshow. This is a preferred way, as it attaches logs from the device automatically, which helps us with troubleshooting.
 
-<form id="contact-form">
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+let url = new URL(window.location.href);
+if (url.searchParams.get("success") === "true") {
+    document.write('<div class="admonition success"> <p class="admonition-title">Message sent</p> <p>Thank you for your message, it has been sent. If you didn’t receive a reply from us within a few days, please also check your spam folder.</p> </div>')
+}
+</script>
+<script>
+function onSubmit(token) {
+ document.getElementById("contact-form").requestSubmit();
+}
+</script>
+
+<form id="contact-form" method="post" action="/send-email.php">
     <div>
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" placeholder="Your name" required class="md-input md-input--stretch">
@@ -19,13 +35,13 @@ If you found a bug, you can send us a [bug report](../documentation/troubleshoot
     </div>
     <div>
         <label for="subject">Subject:</label>
-        <input type="email" name="subject" id="subject" placeholder="Title of your message" required class="md-input md-input--stretch">
+        <input type="text" name="subject" id="subject" placeholder="Title of your message" required class="md-input md-input--stretch" minlength="5">
     </div>
     <div>
         <label for="message">Message:</label>
-        <textarea placeholder="Your message" name="message" id="message" required  class="md-input md-input--stretch" rows="8" style="height: auto"></textarea>
+        <textarea placeholder="Your message" name="message" id="message" required  class="md-input md-input--stretch" rows="8" style="height: auto" minlength="10"></textarea>
     </div>
-    <button type="submit" class="md-button md-button--primary">Send</button>
+    <button data-action="submit" class="md-button md-button--primary g-recaptcha" data-callback="onSubmit" data-sitekey="6LcJ1dYUAAAAAOUNrTD0AlFVXxKaPbtYGqgb7Eei">Send</button>
 </form>
 
 If you didn’t receive a reply from us within a few days, please also check your spam folder.

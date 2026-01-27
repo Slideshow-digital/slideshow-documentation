@@ -1,5 +1,5 @@
 ---
-icon: material/download
+icon: material/arrow-right
 ---
 
 # Get started

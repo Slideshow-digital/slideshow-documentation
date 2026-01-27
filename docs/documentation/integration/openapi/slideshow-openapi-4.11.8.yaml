@@ -4,7 +4,7 @@ info:
   description: 'This is description of local HTTP REST API available in Slideshow - Digital Signage player'
   contact:
     email: slideshow@slideshow.digital
-  version: 4.11.5
+  version: 4.11.8
 externalDocs:
   description: Find out more about Slideshow - Digital Signage player
   url: 'https://slideshow.digital'
@@ -27,6 +27,10 @@ tags:
     description: Endpoints covering statistics of face detection from camera. Face detection has to be set up and turned on for these endpoints to return valid data.
   - name: synchronization
     description: Endpoints covering file synchronization from external servers.
+  - name: content
+    description: Endpoints covering operations with content entries.
+  - name: zoneSchedule
+    description: Endpoints covering operations with playlist schedules for zones.
 paths:
   /ajax/zones:
     get:
@@ -1041,7 +1045,395 @@ paths:
         '200':
           description: Success
       security:
-        - basicAuth: [] 
+        - basicAuth: []
+  /ajax/content/get:
+    get:
+      tags:
+        - content
+      summary: List of content
+      description: Returns list all of content entries
+      operationId: contentGet
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
+  /ajax/content/create:
+    post:
+      tags:
+        - content
+      summary: Create content
+      description: Create new content entry
+      operationId: contentCreate
+      parameters:
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Name of the new content
+        - name: type
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [ "RANDOM", "ALPHABETICALLY", "STREAM", "DATE_TIME", "WEATHER", "RSS", "TEXT", "VIDEO_INPUT", "YOUTUBE"]
+          description: Type of the new content (default is Files randomly)
+        - name: path
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Path of the new content
+      responses:
+        '200':
+          description: Success - returns new content ID
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  result:
+                    type: object
+                    properties:
+                      id: 
+                        type: number
+                      playlistId: 
+                        type: number
+              examples:
+                Sample:
+                  value: "{\n\t\"success\": true,\n\t\"result\": {\n\t\t\"id\": 1,\n\t\t\"playlistId\": 1\n\t}\n}"
+      security:
+        - basicAuth: []
+  /ajax/content/update:
+    post:
+      tags:
+        - content
+      summary: Update content
+      description: Update existing content entry
+      operationId: contentUpdate
+      parameters:
+        - name: id
+          in: query
+          required: true
+          schema:
+            type: number
+          description: ID of the content entry to be updated
+        - name: name
+          in: query
+          required: false
+          schema:
+            type: string
+          description: New name of the content
+        - name: type
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [ "RANDOM", "ALPHABETICALLY", "STREAM", "DATE_TIME", "WEATHER", "RSS", "TEXT", "VIDEO_INPUT", "YOUTUBE"]
+          description: New type of the content
+        - name: path
+          in: query
+          required: false
+          schema:
+            type: string
+          description: New path of the content
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
+  /ajax/content/delete:
+    post:
+      tags:
+        - content
+      summary: Delete content
+      description: Delete existing content entry, if it is not used in schedules
+      operationId: contentDelete
+      parameters:
+        - name: id
+          in: query
+          required: true
+          schema:
+            type: number
+          description: ID of the content entry to be deleted
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
+  /ajax/schedule/zone/get:
+    get:
+      tags:
+        - zoneSchedule
+      summary: List of zone schedules
+      description: Returns list of all playlist schedules for zone
+      operationId: scheduleZoneGet
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
+  /ajax/schedule/zone/create:
+    post:
+      tags:
+        - zoneSchedule
+      summary: Create zone schedule
+      description: Create new playlist schedule for zone
+      operationId: scheduleZoneCreate
+      parameters:
+        - name: playlistId
+          in: query
+          required: true
+          schema:
+            type: number
+          description: ID of the playlist to schedule
+        - name: timeFrom
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Start time in HH:mm format
+        - name: timeTo
+          in: query
+          required: false
+          schema:
+            type: string
+          description: End time in HH:mm format
+        - name: dateFrom
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Optional start date in YYYY-MM-DD format
+        - name: dateTo
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Optional end date in YYYY-MM-DD format          
+        - name: indexInMonth
+          in: query
+          required: false
+          schema:
+            type: number
+            minimum: -1
+            maximum: 31
+          description: Optional, for scheduling on n-th occurence of the month
+        - name: recurrenceInterval
+          in: query
+          required: false
+          schema:
+            type: number
+            minimum: 1
+            maximum: 99
+          description: Optional, for scheduling every n-th occurrence
+        - name: monday
+          in: query
+          required: true
+          schema:
+            type: boolean
+          description: Whenther the schedule is valid for Monday
+        - name: tuesday
+          in: query
+          required: true
+          schema:
+            type: boolean
+          description: Whenther the schedule is valid for Tuesday
+        - name: wednesday
+          in: query
+          required: true
+          schema:
+            type: boolean
+          description: Whenther the schedule is valid for Wednesday
+        - name: thursday
+          in: query
+          required: true
+          schema:
+            type: boolean
+          description: Whenther the schedule is valid for Thursday
+        - name: friday
+          in: query
+          required: true
+          schema:
+            type: boolean
+          description: Whenther the schedule is valid for Friday
+        - name: saturday
+          in: query
+          required: true
+          schema:
+            type: boolean
+          description: Whenther the schedule is valid for Saturday
+        - name: sunday
+          in: query
+          required: true
+          schema:
+            type: boolean
+          description: Whenther the schedule is valid for Sunday
+        - name: priority
+          in: query
+          required: false
+          schema:
+            type: number
+            minimum: 2
+            maximum: 4
+          description: Priority for resolving conflicts between overlapping schedules. The higher number, the higher priority.
+      responses:
+        '200':
+          description: Success - returns new schedule ID
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  result:
+                    type: object
+                    properties:
+                      id: 
+                        type: number
+              examples:
+                Sample:
+                  value: "{\n\t\"success\": true,\n\t\"result\": {\n\t\t\"id\": 1\n\t}\n}"
+      security:
+        - basicAuth: []
+  /ajax/schedule/zone/update:
+    post:
+      tags:
+        - zoneSchedule
+      summary: Update zone schedule
+      description: Update existing playlist schedule for zone
+      operationId: scheduleZoneUpdate
+      parameters:
+        - name: id
+          in: query
+          required: true
+          schema:
+            type: number
+          description: ID of the schedule entry to be updated
+        - name: playlistId
+          in: query
+          required: false
+          schema:
+            type: number
+          description: ID of the playlist to schedule
+        - name: timeFrom
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Start time in HH:mm format
+        - name: timeTo
+          in: query
+          required: false
+          schema:
+            type: string
+          description: End time in HH:mm format
+        - name: dateFrom
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Optional start date in YYYY-MM-DD format
+        - name: dateTo
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Optional end date in YYYY-MM-DD format          
+        - name: indexInMonth
+          in: query
+          required: false
+          schema:
+            type: number
+            minimum: -1
+            maximum: 31
+          description: Optional, for scheduling on n-th occurence of the month
+        - name: recurrenceInterval
+          in: query
+          required: false
+          schema:
+            type: number
+            minimum: 1
+            maximum: 99
+          description: Optional, for scheduling every n-th occurrence
+        - name: monday
+          in: query
+          required: false
+          schema:
+            type: boolean
+          description: Whenther the schedule is valid for Monday
+        - name: tuesday
+          in: query
+          required: false
+          schema:
+            type: boolean
+          description: Whenther the schedule is valid for Tuesday
+        - name: wednesday
+          in: query
+          required: false
+          schema:
+            type: boolean
+          description: Whenther the schedule is valid for Wednesday
+        - name: thursday
+          in: query
+          required: false
+          schema:
+            type: boolean
+          description: Whenther the schedule is valid for Thursday
+        - name: friday
+          in: query
+          required: false
+          schema:
+            type: boolean
+          description: Whenther the schedule is valid for Friday
+        - name: saturday
+          in: query
+          required: false
+          schema:
+            type: boolean
+          description: Whenther the schedule is valid for Saturday
+        - name: sunday
+          in: query
+          required: false
+          schema:
+            type: boolean
+          description: Whenther the schedule is valid for Sunday
+        - name: priority
+          in: query
+          required: false
+          schema:
+            type: number
+            minimum: 2
+            maximum: 4
+          description: Priority for resolving conflicts between overlapping schedules. The higher number, the higher priority.
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
+  /ajax/schedule/zone/delete:
+    post:
+      tags:
+        - zoneSchedule
+      summary: Delete zone schedule
+      description: Delete existing playlist schedule for zone
+      operationId: scheduleZoneDelete
+      parameters:
+        - name: id
+          in: query
+          required: true
+          schema:
+            type: number
+          description: ID of the schedule entry to be deleted
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
 components:
   securitySchemes:
     basicAuth:
