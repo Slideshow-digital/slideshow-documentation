@@ -22,10 +22,12 @@ We will help you:
 A white-label solution lets you rebrand and distribute an existing software product as your own.  While the core functionality remains the same, the visual identity, branding, and licensing model are tailored to your business.
 
 In this setup:
+
 - You act as the solution provider or reseller.
 - The Slideshow team serves as the Original Equipment Manufacturer (OEM).
 
 This approach is ideal for:
+
 - Digital signage providers and system integrators
 - Agencies and IT companies offering managed display solutions
 - Businesses that want to embed reliable display software under their own brand

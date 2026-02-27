@@ -46,4 +46,4 @@ function onSubmit(token) {
 
 If you didn’t receive a reply from us within a few days, please also check your spam folder.
 
-For new features and found bugs, you can also open an issue on <https://github.com/milan-fabian/slideshow-support/issues>, and we will reply there (this will be publicly visible).
+For new features and found bugs, you can also open an issue on <https://github.com/Slideshow-digital/slideshow-support/issues>, and we will reply there (this will be publicly visible).

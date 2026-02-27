@@ -30,7 +30,7 @@ We’re incredibly grateful to everyone who has helped localize the app so far.
 
 Want to see your language listed here? Contribute a translation, and we’ll include your name (or nickname) in the credits!
 
-If you want to add your language, either create a pull request on our [GitHub repository](https://github.com/milan-fabian/slideshow-localization), or send us this [Excel file](https://github.com/milan-fabian/slideshow-localization/raw/master/backend/localization.xlsx) with an added translation.
+If you want to add your language, either create a pull request on our [GitHub repository](https://github.com/Slideshow-digital/slideshow-localization), or send us this [Excel file](https://github.com/Slideshow-digital/slideshow-localization/raw/master/backend/localization.xlsx) with an added translation.
 
 To keep translations consistent and accurate, please follow these best practices:
 

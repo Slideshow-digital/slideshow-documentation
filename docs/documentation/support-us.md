@@ -4,10 +4,10 @@ icon: material/lifebuoy
 
 # Support us
 
-The Slideshow app is free for both commercial and non-commercial use — and our goal is to keep it that way.  
+The SlideShow app is free for both commercial and non-commercial use — and our goal is to keep it that way.  
 We believe in free software, especially in a competitive field like digital signage.
 
-If you enjoy using Slideshow and want to help it grow, there are several ways you can personally contribute:
+If you enjoy using SlideShow and want to help it grow, there are several ways you can personally contribute:
 
 ## Spread the Word
 

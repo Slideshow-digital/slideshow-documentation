@@ -1,5 +1,5 @@
 site_name: SlideShow.digital
-site_description: Documentation for Slideshow - Digital Signage System
+site_description: SlideShow - Digital Signage System
 site_url: https://slideshow.digital/
 copyright: Copyright © 2026 Milan Fabian
 theme:
@@ -20,6 +20,8 @@ theme:
 plugins:
   - mkdocs-video
   - search
+  - social
+  - optimize
   - minify:
       minify_html: true
       

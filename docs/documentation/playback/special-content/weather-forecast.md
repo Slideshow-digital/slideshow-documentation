@@ -26,9 +26,9 @@ The temperature is displayed in degrees Celsius by default. Switching to degrees
 
 By selecting icon style on the Edit content page, you can change the style of the weather icon displayed on the screen. Samples from the available styles are in the image below.
 
-![Available weather icon styles: Default, Colorful, Simple, Outlines](weather_icon_styles.png)
+![Available weather icon styles: Default, Colorful, Simple, Outlines and Metno](weather_icon_styles.png)
 /// caption
-Available weather icon styles: Default, Colorful, Simple, Outlines
+Available weather icon styles: Default, Colorful, Simple, Outlines and Metno
 ///
 
 ## Weather sources

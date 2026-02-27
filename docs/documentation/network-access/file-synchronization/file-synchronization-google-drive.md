@@ -13,9 +13,17 @@ It is not necessary to have Google Drive app installed on the Android device; Sl
 ![File synchronization page](gdrive_login.png)
 3. Google login form will open on the device's screen - not on the screen you have the web interface, but on the screen of the device where Slideshow is installed! This is due to Google's security policy, so this step cannot be done remotely.
 
-    If the device's screen stays blank or the login form is not loaded properly, check if your device has internet access and has an up-to-date browser installed (or even has a web browser installed - some devices are shipped with no preinstalled browser).
+    If the device's screen stays blank or the login form is not loaded properly, check if your device has internet access and has an **up-to-date browser installed** (or even has a web browser installed - some devices are shipped with no preinstalled browser).
 
-    If you get an error message saying "Error 403: disallowed_useragent", try installing or updating Chrome (from [Google Play Store](https://play.google.com/store/apps/details?id=com.android.chrome) or [APKMirror](https://www.apkmirror.com/apk/google-inc/chrome/)) or Firefox browser (from [Google Play Store](https://play.google.com/store/apps/details?id=org.mozilla.firefox) or [APKMirror](https://www.apkmirror.com/apk/mozilla/firefox/)) on the Android device and setting it as your default browser. Google doesn't support older browsers for login to their services.
+    If you get an error message saying `Error 403: disallowed_useragent`, try updating the browser, as Google doesn't support older browsers for login to their services.
+	
+	Suggested browsers:
+	
+	- Google Chrome (from [Google Play Store](https://play.google.com/store/apps/details?id=com.android.chrome) or [APKMirror](https://www.apkmirror.com/apk/google-inc/chrome/))
+	- Firefox browser (from [Google Play Store](https://play.google.com/store/apps/details?id=org.mozilla.firefox) or [APKMirror](https://www.apkmirror.com/apk/mozilla/firefox/)) 
+	- BrowseHere (for Android TV / Google TV, from [Google Play Store](https://play.google.com/store/apps/details?id=com.tcl.browser))
+	
+	Don't forget to set the installed browser as the default browser in your Android device settings.
 ![](gdrive_step_3.jpg)
 
 4. Login into your Google account and allow Slideshow to access your Google Drive. We are asking just for read-only access, Slideshow won't (and can't) modify files on your Google Drive.
