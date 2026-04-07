@@ -37,13 +37,13 @@ Different online sources of weather forecast can be used in Slideshow. In order 
 
 Setup of the weather source is through the web interface → menu `Settings` → `Device settings`.
 
-| Name of the forecast source | Open-Meteo | OpenWeatherMap | HERE Maps | Norwegian Meteorological Institute (MET Norway) |
-| - | - | - | - | - |
-| **Website** | [https://open-meteo.com](https://open-meteo.com) | [https://openweathermap.org](https://openweathermap.org) | [https://developer.here.com](https://developer.here.com) | [https://www.met.no/en](https://www.met.no/en) |
+| Name of the forecast source | Open-Meteo | OpenWeatherMap | HERE Maps                                                                                                                                                                    | Norwegian Meteorological Institute (MET Norway) |
+| - | - | - |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| - |
+| **Website** | [https://open-meteo.com](https://open-meteo.com) | [https://openweathermap.org](https://openweathermap.org) | [https://developer.here.com](https://developer.here.com)                                                                                                                     | [https://www.met.no/en](https://www.met.no/en) |
 | **Registration** | Not required | [https://home.openweathermap.org/users/sign_up](https://home.openweathermap.org/users/sign_up) | [https://developer.here.com/sign-up?create=Freemium-Basic&keepState=true&step=account](https://developer.here.com/sign-up?create=Freemium-Basic&keepState=true&step=account) | Not required
-| **Limit for free account** | 10 000 requests per day | 60 requests per minute | 250 000 request per month | Fair usage |
-| **Where to get the API key** | Not required | [https://home.openweathermap.org/api_keys](https://home.openweathermap.org/api_keys) → Generate new key | [https://developer.here.com/projects](https://developer.here.com/projects) → create new project and generate key in the REST section | Not required |
-| **What to enter in the Slideshow’s Device settings** | Weather source: `Open-Meteo` | Weather source: `OpenWeatherMap (hourly)`<br>API key for weather: `{API key}` (change for your actual value) | Weather source: `HERE Destination weather`<br>API key for weather: `{API KEY}` (change for your actual value) | Weather source: `MET Norway (yr.no)` |
+| **Limit for free account** | 10 000 requests per day | 60 requests per minute | Credit card required                                                                                                                                                         | Fair usage |
+| **Where to get the API key** | Not required | [https://home.openweathermap.org/api_keys](https://home.openweathermap.org/api_keys) → Generate new key | [https://developer.here.com/projects](https://developer.here.com/projects) → create new project and generate key in the REST section                                         | Not required |
+| **What to enter in the Slideshow’s Device settings** | Weather source: `Open-Meteo` | Weather source: `OpenWeatherMap (hourly)`<br>API key for weather: `{API key}` (change for your actual value) | Weather source: `HERE Destination weather`<br>API key for weather: `{API KEY}` (change for your actual value)                                                                | Weather source: `MET Norway (yr.no)` |
 
 ![API Key on OpenWeatherMap website](weather_openweather.jpg)
 /// caption

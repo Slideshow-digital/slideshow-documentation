@@ -41,16 +41,27 @@ You can back up and restore these settings using [XML configuration backup](conf
 | Max video duration | Number | Infinity | Maximum time for video playback in seconds. Usable only on older devices if videos tend to get stuck. |
 | Video stream buffering (in ms) | Number | — | Duration of network buffering in milliseconds before the video stream playback is started. For ExoPlayer only. *Reload is required for applying this change.* |
 | CSS style for Excel | Text | — | CSS rules for showing Excel files, e.g., `font-size:120%`. |
-| Default web page zoom | Number | 0 | Zoom of web pages displayed on screen, in percentage. Zero means default (system) zoom. Can be overridden in the `.url` file using the “Enter web page” editor in File manager. |
-| Disable security for web pages | Checkbox | No | For displaying web pages on the screen, CORS check and HTTPS certificate check will be completely disabled. **Very insecure — enable only if you understand the implications.** *Reload is required for applying this change.* |
-| Allow local API for web pages | Checkbox | No | Allow usage of the local API in web pages displayed on screen. *Reload is required for applying this change.* |
-| Clear web cache on start | Checkbox | Yes | Clear the cache for webpages on each start, including cookies, form data and web storage. *Reload is required for applying this change.* |
-| Grant web pages permissions | Checkbox | No | Automatically grant permission to access camera, microphone, etc., to web pages displayed inside this app. |
 | Mute video for audio playlist | Checkbox | No | Mute audio from any video on screen while any audio playlist is active, so audio sources don’t mix. |
 | Show YouTube controls | Checkbox | Yes | Show control slider with YouTube videos. *Reload is required for applying this change.* |
 | Show captions from YouTube | Checkbox | No | Show captions (subtitles) from YouTube videos. Does not work with automatically generated captions. *Reload is required for applying this change.* |
 | Force audio passthrough | Checkbox | No | Force passthrough of audio track when playing a video. Works only with Video player type **ExoPlayer + SurfaceView** and requires device/TV support. *Reload is required for applying this change.* |
 | Display PDF as scrollable | Checkbox | No | Display PDF files as vertically scrollable, instead of page-by-page. |
+
+### WebView
+
+| Setting name | Type | Default value | Description |
+|---|---|---|---|
+| Default web page zoom | Number | 0 | Zoom of web pages displayed on screen, in percentage. Zero means default (system) zoom. Can be overridden in the `.url` file using the “Enter web page” editor in File manager. |
+| Disable security for web pages | Checkbox | No | For displaying web pages on the screen, CORS check and HTTPS certificate check will be completely disabled. **Very insecure — enable only if you understand the implications.** *Reload is required for applying this change.* |
+| Allow local API for web pages | Checkbox | No | Allow usage of the local API in web pages displayed on screen. *Reload is required for applying this change.* |
+| Clear web cache on start | Checkbox | Yes | Clear the cache for webpages on each start, including cookies, form data and web storage. *Reload is required for applying this change.* |
+| Grant web pages permissions | Checkbox | No | Automatically grant permission to access camera, microphone, etc., to web pages displayed inside this app. |
+
+### Content defaults
+| Setting name | Type   | Default value | Description |
+|---|--------|---------------|---|
+| Description text position | Choice | OpenMeteo     | Position of description text in zone. The default is set in Device settings and can be overridden in Content. |
+| Description text size | Number | 5             | Size of the description text, as a percentage of the zone height (1-100%). The default is set in Device settings and can be overridden in Content. |
 
 ### Weather forecast
 | Setting name | Type | Default value | Description |
@@ -112,7 +123,7 @@ You can back up and restore these settings using [XML configuration backup](conf
 ### MQTT
 | Setting name | Type | Default value | Description |
 |---|---|---|---|
-| MQTT server address | Text | — | MQTT broker address. *Reload is required for applying this change.* |
+| MQTT server address | Text | — | MQTT broker address. *Reload is required for applying this change.* |    
 | MQTT username | Text | — | Username for authentication. *Reload is required for applying this change.* |
 | MQTT password | Text | — | Password for authentication. *Reload is required for applying this change.* |
 | Require TLS for MQTT | Checkbox | false | Require TLS for MQTT. *Reload is required for applying this change.* |
@@ -152,3 +163,11 @@ You can back up and restore these settings using [XML configuration backup](conf
 | Ping default gateway | Checkbox | No | Use default gateway for watchdog pings (may be used instead of IP address). Watchdog will be active only if the default gateway is known during app startup. *Reload is required for applying this change.* |
 | Delay between pings (in s) | Number | 30 | Delay in seconds between consecutive pings. *Reload is required for applying this change.* |
 | No. of failed pings for reboot | Number | 3 | Number of consecutive failed pings after which the device is rebooted. Works only on rooted devices. |
+
+### SNMP
+
+| Setting name | Type     | Default value | Description                                                                                                                          |
+|---|----------|---------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| Enable SNMP agent | Checkbox | false         | Whether to enable SNMP (Simple Network Management Protocol) v2c agent for monitoring. *Reload is required for applying this change.* |
+| Port for SNMP agent | Number   | 1161          | UDP port number for SNMP agent. Only port numbers higher than 1000 are available. *Reload is required for applying this change.*                  |
+| SNMP community string | Text     | public        | Security community string for SNMP. *Reload is required for applying this change.*            |

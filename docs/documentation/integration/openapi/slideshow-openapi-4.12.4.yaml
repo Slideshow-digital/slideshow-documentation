@@ -1,12 +1,12 @@
 openapi: 3.0.1
 info:
-  title: Slideshow API
-  description: 'This is description of local HTTP REST API available in Slideshow - Digital Signage player'
+  title: SlideShow API
+  description: 'This is description of local HTTP REST API available in SlideShow - Digital Signage System'
   contact:
-    email: slideshow@slideshow.digital
+    email: support@slideshow.digital
   version: 4.11.8
 externalDocs:
-  description: Find out more about Slideshow - Digital Signage player
+  description: Find out more about SlideShow - Digital Signage System
   url: 'https://slideshow.digital'
 servers:
   - url: '{URL}/'
@@ -428,6 +428,56 @@ paths:
           schema:
             type: string
           description: Name of the zone in which the playback should be resumed (default is main zone) 
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
+  /ajax/zoom/in:
+    put:
+      tags:
+        - display
+      summary: Zoom in webpage
+      description: Zooms in webpage in a zone. Only works with HTML and URL files.
+      operationId: zoomin
+      parameters:
+        - name: zoneId
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: ID of the zone for zooming (default is main zone)
+        - name: zoneName
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Name of the zone in for zooming (default is main zone)
+      responses:
+        '200':
+          description: Success
+      security:
+        - basicAuth: []
+  /ajax/zoom/out:
+    put:
+      tags:
+        - display
+      summary: Zoom out webpage
+      description: Zooms out webpage in a zone. Only works with HTML and URL files.
+      operationId: zoomout
+      parameters:
+        - name: zoneId
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: ID of the zone for zooming (default is main zone)
+        - name: zoneName
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Name of the zone in for zooming (default is main zone)
       responses:
         '200':
           description: Success

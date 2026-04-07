@@ -4,9 +4,7 @@
 
 # White-Label program
 
-Slideshow app is available free of charge “as is” for anyone who wants to use or test it.  
-
-However, if you provide a complete digital signage solution for your clients, you can integrate Slideshow as part of your offering through our **White-Label program**.
+If you provide a complete digital signage solution for your clients, you can integrate Slideshow as part of your offering through our **White-Label program**.
 
 This allows you to release the app under your **own brand**, making it look and feel like your company’s product — without the time, cost, or complexity of developing it yourself.
 
@@ -17,7 +15,7 @@ We will help you:
 - Increase brand visibility and credibility
 - Grow your recurring business by reselling under your name
 
-## What Is White-Labelling
+## Description
 
 A white-label solution lets you rebrand and distribute an existing software product as your own.  While the core functionality remains the same, the visual identity, branding, and licensing model are tailored to your business.
 
@@ -32,7 +30,7 @@ This approach is ideal for:
 - Agencies and IT companies offering managed display solutions
 - Businesses that want to embed reliable display software under their own brand
 
-## What’s Included
+## Included Features
 
 Your white-label package includes:
 
@@ -40,7 +38,7 @@ Your white-label package includes:
 - Personalized loading screen (with your brand, website, or custom graphics)
 - Your contact information on the "About software" screen (name, email, web page, phone etc., *only copyright must remain*)
 - Customization of the default language and default settings, if needed
-- Optional password lock for on-screen menus - ideal for kiosk setups
+- Optional password lock for on-screen menus – ideal for [kiosk setups](../documentation/configuration/kiosk-mode.md)
 
 Additional modifications are available — just let us know your requirements, and we’ll prepare a custom quote.
 
@@ -88,15 +86,15 @@ Additional modifications are available — just let us know your requirements, a
     * Need new business features or guaranteed response time?
     * Tailored development and SLA options available
 
-    :octicons-arrow-right-24: [Contact us](mailto:slideshow@slideshow.digital?subject=White labeling) for a quote
+    :octicons-arrow-right-24: [Contact us](mailto:info@slideshow.digital?subject=White labeling) for a quote
 
 </div>
 
-_All prices exclude VAT._
+_All prices exclude VAT (if applicable, we are located in Slovakia, EU)._
 
-## How to Get Started
+## Get Started
 
-Getting your white-label version is simple — just contact us at :material-email: [slideshow@slideshow.digital](mailto:slideshow@slideshow.digital?subject=White labeling) and include the following details:
+Getting your white-label version is simple — just contact us at :material-email: [info@slideshow.digital](mailto:slideshow@slideshow.digital?subject=White labeling) and include the following details:
 
 - Desired application name
 - Your logo (square, at least 400 × 400 px, transparent PNG or preferably SVG/AI format)

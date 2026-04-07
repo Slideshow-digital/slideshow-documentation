@@ -7,6 +7,12 @@ hide:
 
 # Contact us
 
+<div class="grid cards" markdown>
+
+- :fontawesome-solid-envelope: __Email:__<br>General inquiries: [info@slideshow.digital](mailto:info@slideshow.digital)<br>Technical support: [support@slideshow.digital](mailto:support@slideshow.digital)
+- :fontawesome-solid-map: __Address:__<br>SlideShow / New Rent s.r.o.<br>Belanikova 6, Bratislava, Slovakia
+</div>
+
 Missing a feature? Interested in branding? Want to support the development? Let us know and we will get back to you shortly via email!
 
 If you found a bug, you can send us a [bug report](../documentation/troubleshooting.md#bug-report) directly from Slideshow. This is a preferred way, as it attaches logs from the device automatically, which helps us with troubleshooting.
@@ -47,3 +53,4 @@ function onSubmit(token) {
 If you didn’t receive a reply from us within a few days, please also check your spam folder.
 
 For new features and found bugs, you can also open an issue on <https://github.com/Slideshow-digital/slideshow-support/issues>, and we will reply there (this will be publicly visible).
+

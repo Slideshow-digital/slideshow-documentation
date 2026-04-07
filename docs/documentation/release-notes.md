@@ -6,11 +6,24 @@ icon: material/download-box
 
 *Below is a list of all publicly released versions of Slideshow, together with short release notes and download links.*
 
+## Version 4.12.4
+
+Released on 7 April 2026
+
+[Download universal APK](https://slideshow.digital/apk/4.12.4/slideshow-android-4.12.4.apk), [download APK for ARM v7](https://slideshow.digital/apk/4.12.4/slideshow-android-4.12.4-armeabi-v7a.apk), [download APK for ARM64](https://slideshow.digital/apk/4.12.4/slideshow-android-4.12.4-arm64-v8a.apk), [download APK for x86](https://slideshow.digital/apk/4.12.4/slideshow-android-4.12.4-x86.apk), [download APK for x86-64](https://slideshow.digital/apk/4.12.4/slideshow-android-4.12.4-x86_64.apk)
+
+- New settings for [description text](playback/on-screen-formatting/description-text.md)
+- Added option to disable interaction with a webpage on the screen
+- Optimized startup
+- Added [REST API](integration/rest-api.md) for zooming webpages
+- Added [SNMP agent](configuration/settings.md#snmp) *(beta)*
+- Small fixes & enhancements
+
 ## Version 4.12.1 
 
 Released on 27 February 2026
 
-[Download universal APK](https://slideshow.digital/apk/4.12.1/slideshow-android-4.12.1.apk), [download APK for ARM v7](https://slideshow.digital/apk/4.12.1/slideshow-android-4.12.1-armeabi-v7a.apk), [download APK for ARM64](https://slideshow.digital/apk/4.12.1/slideshow-android-4.12.1-arm64-v8a.apk), [download APK for x86](https://slideshow.digital/apk/4.12.1/slideshow-android-4.12.1-x86.apk), [download APK for x86-64](https://slideshow.digital/apk/4.12.1/slideshow-android-4.12.1 -x86_64.apk)
+[Download universal APK](https://slideshow.digital/apk/4.12.1/slideshow-android-4.12.1.apk), [download APK for ARM v7](https://slideshow.digital/apk/4.12.1/slideshow-android-4.12.1-armeabi-v7a.apk), [download APK for ARM64](https://slideshow.digital/apk/4.12.1/slideshow-android-4.12.1-arm64-v8a.apk), [download APK for x86](https://slideshow.digital/apk/4.12.1/slideshow-android-4.12.1-x86.apk), [download APK for x86-64](https://slideshow.digital/apk/4.12.1/slideshow-android-4.12.1-x86_64.apk)
 
 - New logo and brand
 - Added support for more [external storages](configuration/file-storage.md)

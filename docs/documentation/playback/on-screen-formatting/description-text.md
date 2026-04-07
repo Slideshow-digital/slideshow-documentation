@@ -7,7 +7,7 @@ While displaying images, videos or web pages, it is possible to automatically di
 Examples of the description text
 ///
 
-The setup can be done via the web interface → menu `Content` → `Edit` by filling out `Description text` and `Text colo`r. It is available for content types Single file, Files alphabetically, Files randomly, Audio/video stream and Video input.
+The setup can be done via the web interface → menu `Content` → `Edit` by filling out `Description text` and `Text color`. It is available for content types Single file, Files alphabetically, Files randomly, Audio/video stream and Video input.
 
 - **Description text** – template text which will be displayed on the screen. Can contain several placeholders, which will be replaced dynamically:
     - `{FileName}` – full name and path of the currently displayed file
@@ -16,6 +16,8 @@ The setup can be done via the web interface → menu `Content` → `Edit` by fil
     - `{DateTime}` – date and time when the picture was captured, from EXIF tag of the image (available only for JPEG images)
     - `{...}` – additional data from EXIF tags of the image
 - **Text color** – color of the text on the screen. The background color will be calculated automatically as a semi-transparent complementary color. To turn off the background color, set the text color to semi-transparent.
+- **Description text position** - position of the description text in zone. The default is set in [Device settings](../../configuration/settings.md) and can be overridden in Content.
+- **Description text size** - height of the description text, as a percentage of the zone height (1-100%). The default is set in [Device settings](../../configuration/settings.md) and can be overridden in Content.
 
 ![Setup of the content with description text](description_text_content.png)
 /// caption

@@ -40,4 +40,14 @@ While it is possible to use a separate Android box with Slideshow and connect it
 
 Slideshow can't be set as a launcher app, otherwise NovaStar's configuration won't work properly
 
-We also had an opportunity to test NovaStar TB60, which has a higher limit for LED pixels. The process of the installation is exactly the same.
+We also had an opportunity to test NovaStar TB60, which has two times higher limit for LED pixels. The process of the installation is exactly the same.
+
+![NovaStar TB40 LED controller](tb40-1.jpg)
+/// caption
+NovaStar TB40 LED controller
+///
+
+![LED wall driven by SlideShow and TB40](tb40-2.jpg)
+/// caption
+LED wall driven by SlideShow and TB40
+///

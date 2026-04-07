@@ -4,6 +4,8 @@ icon: material/text-long
 
 # Privacy policy
 
+Company New Rent s.r.o. registered in Slovakia develops Slideshow application and operates the website https://slideshow.digital.
+
 This document describes the privacy policy of the Slideshow application. As we continue to add new features to the Slideshow application, this policy may change. Please review it regularly.
 
 Slideshow stores all the information on the device and doesn’t share them except the cases explained below. Security procedures are in place to protect the confidentiality of your data. Sensitive data, such as tokens and passwords, are stored hashed, encrypted, and/or in a private folder accessible only to Slideshow.

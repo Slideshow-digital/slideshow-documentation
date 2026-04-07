@@ -1,5 +1,5 @@
-site_name: SlideShow.digital
-site_description: SlideShow - Digital Signage System
+site_name: SlideShow - Digital Signage System
+site_description: SlideShow - Free Digital Signage System for Android
 site_url: https://slideshow.digital/
 copyright: Copyright © 2026 Milan Fabian
 theme:
@@ -46,6 +46,8 @@ extra:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY
   social:
+    - icon: fontawesome/solid/envelope  
+      link: mailto:info@slideshow.digital
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/channel/UCJFSXCItojY4PS76JNr_pdQ
     - icon: fontawesome/brands/facebook
@@ -64,7 +66,17 @@ nav:
   - Get started: 
     - get-started/index.md
     - get-started/tutorial.md
-    - get-started/white-label.md
+  - Use cases:
+    - use-cases/index.md
+    - Case studies:
+        - use-cases/case-studies/art-hotel-kastiel.md
+        - use-cases/case-studies/artwork-james-mcgrath.md
+        - use-cases/case-studies/local-business-patriots.md
+        - use-cases/case-studies/ormiston-horizon-academy.md
+  - Commercial services:
+    - commercial/index.md
+    - commercial/white-label.md
+    - commercial/partners.md
   - Documentation:
     - documentation/index.md
     - Playback:
@@ -115,6 +127,7 @@ nav:
       - documentation/configuration/localization.md
       - documentation/configuration/setup-csv.md
       - Backup and restore: documentation/configuration/configuration-backup-restore.md
+      - documentation/configuration/kiosk-mode.md
     - Interactivity:
       - documentation/interactivity/keyboard.md
       - documentation/interactivity/triggers.md
@@ -135,11 +148,6 @@ nav:
         - documentation/hardware/hardware-reviews/benq-st550k.md
         - documentation/hardware/hardware-reviews/novastar-tb40.md
         - documentation/hardware/hardware-reviews/intel-compute-stick.md
-    - Case studies:
-      - documentation/case-studies/art-hotel-kastiel.md
-      - documentation/case-studies/artwork-james-mcgrath.md
-      - documentation/case-studies/local-business-patriots.md
-      - documentation/case-studies/ormiston-horizon-academy.md
     - documentation/release-notes.md
     - documentation/troubleshooting.md
     - documentation/support-us.md

@@ -32,7 +32,7 @@ Your contribution helps make Slideshow accessible to more users worldwide.
 
 You can support ongoing development in several ways:
 
-- Purchase a [white-label version](../get-started/white-label.md) for your business
+- Purchase a [white-label version](../commercial/white-label.md) for your business
 - Request custom commercial features
 - Send us a device for testing
 

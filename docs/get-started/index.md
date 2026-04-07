@@ -6,7 +6,7 @@ icon: material/arrow-right
 
 SlideShow app is free for personal as well as commercial usage and contains no advertisement. It can be installed on almost any Android device with Android version 5.0 or newer.
 
-The current version of SlideShow is 4.12.1, released on 27 February 2026. 
+The current version of SlideShow is 4.12.4, released on 7 April 2026. 
 
 <div class="grid cards" markdown>
 
@@ -41,7 +41,7 @@ The current version of SlideShow is 4.12.1, released on 27 February 2026.
 
       White-Label program for Digital Signage providers
 
-      [:material-copyright: White label](white-label.md){ .md-button .md-button--primary }
+      [:material-copyright: White label](../commercial/white-label.md){ .md-button .md-button--primary }
 
 </div>
 
