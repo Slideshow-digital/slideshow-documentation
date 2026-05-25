@@ -4,7 +4,7 @@ icon: material/text-long
 
 # Privacy policy
 
-Company New Rent s.r.o. registered in Slovakia develops Slideshow application and operates the website https://slideshow.digital.
+Company New Rent s.r.o. registered in Slovakia develops SlideShow application and operates the website https://slideshow.digital.
 
 This document describes the privacy policy of the Slideshow application. As we continue to add new features to the Slideshow application, this policy may change. Please review it regularly.
 

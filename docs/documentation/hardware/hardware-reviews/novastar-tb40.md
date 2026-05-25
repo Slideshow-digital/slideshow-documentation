@@ -14,8 +14,8 @@ While it is possible to use a separate Android box with Slideshow and connect it
 6. Connect to the device using username `admin`, password `SN2008@+` (if you changed the password, enter the changed one)
 7. Enable ADB and disable PlayService
 8. Pick the [installation APK](../../../get-started/index.md), check `Auto launch on startup` and install app
-9. Open command line on your computer and run command `adb shell`. If you get `adb.exe: device offline` error, unplug the USB B cable from the LED controller, re-plug it and try the command again. 
-10. While in `adb shell` command, enter the following commands, in order to allow permissions form Slideshow:
+9. Open command line on your computer and run command `adb shell`. If you get `adb.exe: device offline` error, unplug the USB B cable from the LED controller, re-plug it and try the command again. If you get any error with the later commands, try running `adb root` command before `adb shell`.
+10. While in `adb shell` command, enter the following commands, in order to allow permissions for SlideShow:
 
     ``` 
     pm grant sk.mimac.slideshow android.permission.READ_EXTERNAL_STORAGE;
@@ -36,11 +36,12 @@ While it is possible to use a separate Android box with Slideshow and connect it
     settings put global package_verifier_user_consent -1;
     ```
 
-11. Run the app
+12. You can exit the `adb shell` command by typing `exit`.
+13. Run the app, for example using command `adb shell am start -n sk.mimac.slideshow/sk.mimac.slideshow.StartupActivity` from the computer.
 
 Slideshow can't be set as a launcher app, otherwise NovaStar's configuration won't work properly
 
-We also had an opportunity to test NovaStar TB60, which has two times higher limit for LED pixels. The process of the installation is exactly the same.
+Based on the feedback from the community, SlideShow can be installed on other Taurus series controllers from NovaStart, such as TB60 and TB20 Plus, with the same steps.
 
 ![NovaStar TB40 LED controller](tb40-1.jpg)
 /// caption

@@ -36,7 +36,7 @@ Your white-label package includes:
 
 - Custom application name and logo
 - Personalized loading screen (with your brand, website, or custom graphics)
-- Your contact information on the "About software" screen (name, email, web page, phone etc., *only copyright must remain*)
+- Your contact information on the "About software" screen (name, email, web page, phone etc., *only the copyright must remain*)
 - Customization of the default language and default settings, if needed
 - Optional password lock for on-screen menus – ideal for [kiosk setups](../documentation/configuration/kiosk-mode.md)
 
@@ -107,7 +107,7 @@ Once payment is received (via PayPal or bank transfer), we’ll prepare your **A
 
 Preparation time is typically 2-4 business days.
 
-You can distribute, install and use this APK file without any restrictions, on an unlimited number of devices.
+You can distribute, install and use this APK file without any restrictions, on an unlimited number of devices. If you would like to offer documentation to your clients, you can reuse our articles available at <https://github.com/Slideshow-digital/slideshow-documentation>.
 
 !!! tip "Licensing Module"
     For resellers or managed service providers, we recommend adding the Licensing Module. It gives you full control over client activations and helps secure your branded solution.
