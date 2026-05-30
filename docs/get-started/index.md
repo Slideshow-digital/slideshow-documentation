@@ -6,7 +6,7 @@ icon: material/arrow-right
 
 SlideShow app is free for personal as well as commercial usage and contains no advertisement. It can be installed on almost any Android device with Android version 5.0 or newer.
 
-The current version of SlideShow is 4.12.4, released on 7 April 2026. 
+The current version of SlideShow is 4.12.5, released on 30 May 2026. 
 
 <div class="grid cards" markdown>
 
@@ -16,7 +16,7 @@ The current version of SlideShow is 4.12.4, released on 7 April 2026.
 
     Directly download the installation APK file and install it manually on your Android device
 
-    [:material-download: Download](https://slideshow.digital/apk/4.12.1/slideshow-android-4.12.1.apk){ .md-button .md-button--primary }
+    [:material-download: Download](https://slideshow.digital/apk/4.12.5/slideshow-android-4.12.5.apk){ .md-button .md-button--primary }
 
 
 -   __Download from Google Play or other stores__

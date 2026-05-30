@@ -6,6 +6,16 @@ icon: material/download-box
 
 *Below is a list of all publicly released versions of Slideshow, together with short release notes and download links.*
 
+## Version 4.12.5
+
+Released on 30 May 2026
+
+[Download universal APK](https://slideshow.digital/apk/4.12.5/slideshow-android-4.12.5.apk), [download APK for ARM v7](https://slideshow.digital/apk/4.12.5/slideshow-android-4.12.5-armeabi-v7a.apk), [download APK for ARM64](https://slideshow.digital/apk/4.12.5/slideshow-android-4.12.5-arm64-v8a.apk), [download APK for x86](https://slideshow.digital/apk/4.12.5/slideshow-android-4.12.5-x86.apk), [download APK for x86-64](https://slideshow.digital/apk/4.12.5/slideshow-android-4.12.5-x86_64.apk)
+
+- Support for screen power off on selected devices (see menu `Settings` → `Screen power`)
+- Enhanced shell console
+- Small fixes & enhancements
+
 ## Version 4.12.4
 
 Released on 7 April 2026
