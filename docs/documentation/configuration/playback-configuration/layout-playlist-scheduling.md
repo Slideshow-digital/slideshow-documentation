@@ -10,6 +10,8 @@ You can setup schedule for screen layouts in order to display different screen l
 
 You can manage the schedules via menu `Screen layout` → button `Screen layouts schedule`.
 
+If your device supports screen power off, you can use `Power off` option in Screen layout schedules during the time the display should be completely off. The hardware support can be verified and tested via menu `Settings` → `Screen power`. Enabling the [setting](../settings.md#general-settings) "Keep the background service" is highly recommended, so the app can re-launch itself at the time the screen should be powered back on.
+
 ![Page for editing screen layouts schedule](layout_schedules.jpg)
 /// caption
 Page for editing screen layouts schedule
