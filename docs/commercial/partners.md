@@ -34,10 +34,10 @@ Our partners are offering a complete solution based on SlideShow, bundled with w
 
     ![](technovia-logo.png){: style="max-height: 80px;"}
     
-    Professional Digital Signage Solutions in UK.
+    Professional Digital Signage Solutions and exclusive hardware partner for the UK and Ireland.
 
     [technovia-uk.com](https://technovia-uk.com/){ .md-button .md-button--primary }
 
 </div>
 
-If you are interested in becoming our partner and offer your services and hardware together with SlideShow, please contact us.
+If you are interested in becoming our partner and offering your services and hardware together with SlideShow, please contact us.

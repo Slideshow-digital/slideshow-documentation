@@ -1,6 +1,6 @@
 # Management of multiple players
 
-Each installation of Slideshow app on an Android device is by default independent. As there is no direct cloud dependency (thanks to which you can enjoy Slideshow for free), there is no universal full remote or centralized management.
+Each installation of SlideShow app on an Android device is independent by default.
 
 However, there are still some very good ways to manage multiple players with Slideshow together and even remotely. The setup might require more than just two clicks, but in the end, it gives you a stable solution without any additional costs and any unwanted dependency on a cloud provider. There are several possibilities, you can find all of them below.
 
@@ -33,3 +33,7 @@ Synchronization with WebDAV or SFTP works similarly as well, but you will need y
 Slideshow offers a possibility to set up direct communication between multiple devices (players). It can be activated from the web interface → menu `Settings` → `Other devices`. More information can be found in the [particular documentation](communication-between-devices.md). It works if the devices are on the same wired local network, or (if your router supports it) if they are on different networks as well.
 
 After the communication is set up, you can use the Other devices page to monitor whether the other players are online and send commands to multiple players at the same time.
+
+## SlideShow Cloud Management
+
+If you are a Digital Signage provider, as a commercial alternative, you can you our [SlideShow Cloud Management](../../commercial/slideshow-cloud-management.md) for managing multiple players remotely.

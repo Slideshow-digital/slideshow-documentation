@@ -76,6 +76,7 @@ nav:
   - Commercial services:
     - commercial/index.md
     - commercial/white-label.md
+     - commercial/slideshow-cloud-management.md
     - commercial/partners.md
   - Documentation:
     - documentation/index.md

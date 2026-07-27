@@ -36,4 +36,4 @@ Configuration page of a screen layout
 
 ## Video tutorial
 
-<iframe style="width: 100%; aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/f-2ikw_3riw?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0" frameborder="0" allowfullscreen></iframe>
+<iframe style="width: 100%; aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/ZGnPDErDYgQ?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0" frameborder="0" allowfullscreen></iframe>

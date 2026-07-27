@@ -44,7 +44,7 @@ Additional modifications are available — just let us know your requirements, a
 
 ## Preview
 
-<iframe style="width: 100%; aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/UKWvK-xpzy0?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0" frameborder="0" allowfullscreen></iframe>
+<iframe style="width: 100%; aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/vsiY7xi_B7A?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0" frameborder="0" allowfullscreen></iframe>
 
 ## Pricing
 
@@ -94,7 +94,7 @@ _All prices exclude VAT (if applicable, we are located in Slovakia, EU)._
 
 ## Get Started
 
-Getting your white-label version is simple — just contact us at :material-email: [info@slideshow.digital](mailto:slideshow@slideshow.digital?subject=White labeling) and include the following details:
+Getting your white-label version is simple — just contact us at :material-email: [info@slideshow.digital](mailto:info@slideshow.digital?subject=White labeling) and include the following details:
 
 - Desired application name
 - Your logo (square, at least 400 × 400 px, transparent PNG or preferably SVG/AI format)

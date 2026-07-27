@@ -6,6 +6,18 @@ icon: material/download-box
 
 *Below is a list of all publicly released versions of Slideshow, together with short release notes and download links.*
 
+## Version 4.12.7
+
+Released on 27 July 2026
+
+[Download universal APK](https://slideshow.digital/apk/4.12.7/slideshow-android-4.12.7.apk), [download APK for ARM v7](https://slideshow.digital/apk/4.12.7/slideshow-android-4.12.7-armeabi-v7a.apk), [download APK for ARM64](https://slideshow.digital/apk/4.12.7/slideshow-android-4.12.7-arm64-v8a.apk), [download APK for x86](https://slideshow.digital/apk/4.12.7/slideshow-android-4.12.7-x86.apk), [download APK for x86-64](https://slideshow.digital/apk/4.12.7/slideshow-android-4.12.7-x86_64.apk)
+
+- Added simple remote screen control (see menu `Settings` - `Remote control`)
+- Added new blocks to Triggers (menu `Settings` - `Triggers`)
+- Changed loading graphics
+- Added Arabic localization
+- Small fixes & enhancements
+
 ## Version 4.12.6
 
 Released on 15 June 2026

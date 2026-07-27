@@ -6,6 +6,7 @@ The language used for date, time, and weather information (such as day of week a
 
 ## Currently supported languages
 
+* Arabic (thanks to Hani Abdallah)
 * Chinese (thanks to evin792)
 * Croatian (thanks to Josip Papić)
 * Czech (thanks to Aleš Obst)

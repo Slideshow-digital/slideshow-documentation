@@ -28,14 +28,13 @@ larger systems.
 
     [:material-information: Our partners](partners.md){ .md-button .md-button--primary }
 
--   __Onboarding__
+-   __SlideShow Cloud Management__
 
     ---
 
-    Let us prepare everything you need for a fast rollout: custom configurations, screen layouts, templates,
-    and content tailored to your environment. **From 20 EUR per screen.**
+    SlideShow Cloud Management provides a centralized platform for remote management of multiple players running the SlideShow app.
 
-    [:material-email: Contact us for quote](mailto:info@slideshow.digital){ .md-button .md-button--primary }
+    [:material-email: SlideShow Cloud Management](slideshow-cloud-management.md){ .md-button .md-button--primary }
 
 -   __SlideShow on Windows__
 

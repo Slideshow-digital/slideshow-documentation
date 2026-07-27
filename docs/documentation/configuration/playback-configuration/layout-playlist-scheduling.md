@@ -20,6 +20,7 @@ Page for editing screen layouts schedule
 
 ## Screen layouts intervals
 
+
 If you enable `Use screen layout intervals` through menu `Settings` → `Device settings`, Slideshow will use screen layout intervals to determine which screen layout should be displayed, instead of screen layout schedule. Intervals in minutes can be then set via menu `Screen layout` → `Edit screen layout` → `Interval`. The check whether to change a layout on the screen is performed automatically on the background every 10 seconds.
 
 Settings `Wait with screen layout change` and `Reset order on playlist change` are often used with these intervals. Enabling `Wait with screen layout change` can be used for letting videos (or other content) play until the end before changing the layout. Disabling `Reset order on playlist change` is beneficial if the layout changes often and it is not required to start the playlist from the beginning of each change.
@@ -53,7 +54,6 @@ Visualization of the default configuration - this is how content, playlists, zon
 /// caption
 Visualization of little bit more complex setup: two zones on the screen, one zone has different playlist during day and night, the day playlists switches between two different contents
 ///
-
 
 
 ## Video tutorial
