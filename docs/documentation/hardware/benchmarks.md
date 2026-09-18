@@ -1,8 +1,8 @@
 # Benchmarks
 
-Slideshow contains a simple hardware benchmarking feature. You can find it via web interface → menu `Information` → `Benchmark`. The usage is pretty straightforward, just click on the Run benchmark button, wait for a few tenths of seconds (depending on your device performance), and you will get a score which represents the hardware performance of the device currently running Slideshow app. The entire benchmark runs in the background, you won’t see anything on the screen, just the results in your browser afterward.
+Slideshow contains a simple hardware benchmarking feature. You can find it via web interface → menu `Information` → `Benchmark`. The usage is pretty straightforward, just click on the Run benchmark button, wait for a few tenths seconds (depending on your device performance), and you will get a score which represents the hardware performance of the device currently running Slideshow app. The entire benchmark runs in the background, you won’t see anything on the screen, just the results in your browser afterward.
 
-The tests are designed to cover different kinds of workloads used in Slideshow app, to give you estimates of how well the device should perform in real life. Included are mathematical calculations, database operations, reading and writing files in storage, graphic processing and multi-threading tests. You can compare the results across various device to find out which one has the best performance.
+The tests are designed to cover different kinds of workloads used in Slideshow app, to give you estimates of how well the device should perform in real life. Included are mathematical calculations, database operations, reading and writing files in storage, graphic processing and multi-threading tests. You can compare the results across various devices to find out which one has the best performance.
 
 ![Benchmark page with results](benchmark_web.png)
 /// caption

@@ -16,7 +16,7 @@ It is possible to set up automatic synchronization of not only media files, but 
 4. Rename the resulting XML file to `configuration.xml` and upload it to the Google Drive folder that is synchronized to the other devices
 5. Create file `setup.csv` with the following content (just a single line, as a text) and upload it to the Google Drive folder *(more information about this file is in [documentation](../configuration/setup-csv.md))*
 ```
-:CONFIG;configuration.xml;delete`
+:CONFIG;configuration.xml;delete
 ```
 6. Wait for the automatic synchronization from this Google Drive folder, and the configuration change will be applied automatically
 

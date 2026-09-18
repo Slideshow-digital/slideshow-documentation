@@ -7,6 +7,8 @@ You can set up up displaying RSS feeds on screen by creating a new content with 
 Dialog for adding new content
 ///
 
+The RSS feed can be displayed as static messages on the screen (one by one) or as a scrolling ticker, by changing the option `Style of display` on Edit content page.
+
 ## Source of RSS file
 
 The source of displayed RSS messages can be setup through the field URL for RSS messages in RSS content setup. There are several possible types of sources:
@@ -29,4 +31,4 @@ If you want to create an RSS file by yourself and want a more advanced tool than
 
 ## Video tutorial
 
-<iframe style="width: 100%; aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/cRxAuWNwGwg?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0" frameborder="0" allowfullscreen></iframe>
+<iframe style="width: 100%; aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/7qZrAvhgkQo?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0" frameborder="0" allowfullscreen></iframe>

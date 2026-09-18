@@ -6,7 +6,7 @@ icon: material/arrow-right
 
 SlideShow app is free for personal as well as commercial usage and contains no advertisement. It can be installed on almost any Android device with Android version 5.0 or newer.
 
-The current version of SlideShow is 4.12.7, released on 27 July 2026. 
+The current version of SlideShow is 4.12.8, released on 18 September 2026. 
 
 <div class="grid cards" markdown>
 
@@ -16,14 +16,14 @@ The current version of SlideShow is 4.12.7, released on 27 July 2026.
 
     Directly download the installation APK file and install it manually on your Android device
 
-    [:material-download: Download](https://slideshow.digital/apk/4.12.7/slideshow-android-4.12.7.apk){ .md-button .md-button--primary }
+    [:material-download: Download](https://slideshow.digital/apk/4.12.8/slideshow-android-4.12.8.apk){ .md-button .md-button--primary }
 
 
 -   __Download from Google Play or other stores__
 
     ---
 
-    SlideShow is available for installation on [Google Play](https://play.google.com/store/apps/details?id=sk.mimac.slideshow), [Amazon Appstore](https://www.amazon.com/Milan-Fabian-Slideshow-Digital-Signage/dp/B089J4ZTQY), [GetJar](https://www.getjar.com/categories/photos-apps/more/Slideshow-Digital-Signage-player-978975) or [Aptoide](https://slideshow-milan-fabian.en.aptoide.com/app)
+    SlideShow is available for installation on [Google Play](https://play.google.com/store/apps/details?id=sk.mimac.slideshow), [Amazon Appstore](https://www.amazon.com/Milan-Fabian-Slideshow-Digital-Signage/dp/B089J4ZTQY) or [Aptoide](https://slideshow-milan-fabian.en.aptoide.com/app)
 
     [:material-google-play: Google Play Store](https://play.google.com/store/apps/details?id=sk.mimac.slideshow){ .md-button .md-button--primary }
     

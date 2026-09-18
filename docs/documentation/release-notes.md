@@ -6,6 +6,16 @@ icon: material/download-box
 
 *Below is a list of all publicly released versions of Slideshow, together with short release notes and download links.*
 
+## Version 4.12.8
+
+Released on 18 September 2026
+
+[Download universal APK](https://slideshow.digital/apk/4.12.8/slideshow-android-4.12.8.apk), [download APK for ARM v7](https://slideshow.digital/apk/4.12.8/slideshow-android-4.12.8-armeabi-v7a.apk), [download APK for ARM64](https://slideshow.digital/apk/4.12.8/slideshow-android-4.12.8-arm64-v8a.apk), [download APK for x86](https://slideshow.digital/apk/4.12.8/slideshow-android-4.12.8-x86.apk), [download APK for x86-64](https://slideshow.digital/apk/4.12.8/slideshow-android-4.12.8-x86_64.apk)
+
+- Added new blocks to Triggers (menu Settings - Triggers)
+- Added custom fonts for description text
+- Small fixes & enhancements
+
 ## Version 4.12.7
 
 Released on 27 July 2026
@@ -343,7 +353,7 @@ Released on 15 November 2022
 
 Released on 14 October 2022
 
-[Download universal APK](https://slideshow.digital/apk/3.24.7/slideshow-android-3.24.7.apk), [download APK for ARM v7](https://slideshow.digital/apk/3.24.7/slideshow-android-3.24.7-armeabi-v7a.apk), [download APK for ARM64](https://slideshow.digital/apk/3.24.7/slideshow-android-3.24.7-arm64-v8a.apk), [download APK for x86](https://slideshow.digital/apk/3.24.7/slideshow-android-3.24.7-x86.apk), [download APK for x86-64](https://slideshow.digital/apk/3.24.7/slideshow-android-3.24.7-x86_64.apk)
+[Download universal APK](https://slideshow.digital/apk/3.24.7/slideshow-android-3.24.7.apk)
 
 - Added changing playlists through on-screen menu
 - Added new methods to the [local JavaScript API](https://slideshow.digital/documentation/local-javascript-api/)

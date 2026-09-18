@@ -60,7 +60,7 @@ You can back up and restore these settings using [XML configuration backup](conf
 ### Content defaults
 | Setting name | Type   | Default value | Description |
 |---|--------|---------------|---|
-| Description text position | Choice | OpenMeteo     | Position of description text in zone. The default is set in Device settings and can be overridden in Content. |
+| Description text position | Choice | Top left      | Position of description text in zone. The default is set in Device settings and can be overridden in Content. |
 | Description text size | Number | 5             | Size of the description text, as a percentage of the zone height (1-100%). The default is set in Device settings and can be overridden in Content. |
 
 ### Weather forecast
@@ -76,13 +76,13 @@ You can back up and restore these settings using [XML configuration backup](conf
 | Maximal length of RSS message | Number | 215 | How many characters of the RSS message should be displayed before clipping. Applied next time the RSS file is fetched. |
 
 ### External storages
-| Setting name | Type | Default value | Description |
-|---|---|---|---|
-| Storage for media | Checkbox | Internal storage | Select storage where files for playing will be saved. Choose from internal storage of the Android device or external storage (SD card or USB flash drive, if available). External storage has to be always present when this app is running. Check setting `Action on Flash drive insert` if using non-permanent external storage. *Reload is required for applying this change.* |
+| Setting name | Type   | Default value | Description |
+|---|--------|---|---|
+| Storage for media | Choice | Internal storage | Select storage where files for playing will be saved. Choose from internal storage of the Android device or external storage (SD card or USB flash drive, if available). External storage has to be always present when this app is running. Check setting `Action on Flash drive insert` if using non-permanent external storage. *Reload is required for applying this change.* |
 | Action on Flash drive insert | Choice | Copy files from Flash drive | What should happen when a Flash drive is inserted into the device’s USB port. |
-| Folder on Flash drive | Text | slideshow | From which folder on Flash drive to copy files. Empty means the root folder on the Flash drive. Used only if copying from Flash drive is allowed. |
-| Priority folder on Flash drive | Text | — | Priority folder on the Flash drive. If this folder exists, only it will be used and the regular folder will be ignored. Keep empty to skip priority folder checking. |
-| Target folder from Flash drive | Text | / | Target folder in this app where files from the Flash drive are copied. Slash means the root folder. Used only if copying from Flash drive is allowed. |
+| Folder on Flash drive | Text   | slideshow | From which folder on Flash drive to copy files. Empty means the root folder on the Flash drive. Used only if copying from Flash drive is allowed. |
+| Priority folder on Flash drive | Text   | — | Priority folder on the Flash drive. If this folder exists, only it will be used and the regular folder will be ignored. Keep empty to skip priority folder checking. |
+| Target folder from Flash drive | Text   | / | Target folder in this app where files from the Flash drive are copied. Slash means the root folder. Used only if copying from Flash drive is allowed. |
 
 ### Network interfaces
 | Setting name | Type | Default value | Description |
@@ -169,5 +169,5 @@ You can back up and restore these settings using [XML configuration backup](conf
 | Setting name | Type     | Default value | Description                                                                                                                          |
 |---|----------|---------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | Enable SNMP agent | Checkbox | false         | Whether to enable SNMP (Simple Network Management Protocol) v2c agent for monitoring. *Reload is required for applying this change.* |
-| Port for SNMP agent | Number   | 1161          | UDP port number for SNMP agent. Only port numbers higher than 1000 are available. *Reload is required for applying this change.*                  |
-| SNMP community string | Text     | public        | Security community string for SNMP. *Reload is required for applying this change.*            |
+| Port for SNMP agent | Number   | 1161          | UDP port number for SNMP agent. Only port numbers higher than 1024 are available. *Reload is required for applying this change.*     |
+| SNMP community string | Text     | public        | Security community string for SNMP. *Reload is required for applying this change.*                                                   |

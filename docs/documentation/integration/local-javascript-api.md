@@ -72,7 +72,7 @@ You can use the HTML file bellow as an example. It contains several buttons, eac
   <body>
     <h1>Examples for Slideshow's Local JavaScript API</h1>
 
-    <h2>Method SlideshowAPI.showFile(zoneName, fileName, length)</h2>
+    <h2>Method SlideshowAPI.showFile(zoneName, fileName, duration)</h2>
 
     <button onclick="SlideshowAPI.showFile(null, 'image1.jpg', 5);"> 
         Display file image1.jpg <br>in the main zone <br>for 5 seconds 
@@ -81,10 +81,10 @@ You can use the HTML file bellow as an example. It contains several buttons, eac
         Display file image2.jpg from folder images <br>on the zone called Side zone <br>for 10 seconds
     </button>
     <button onclick="SlideshowAPI.showFile(null, 'video1.mp4', 10);">
-        Display file video1.mp4 <br>in the main zone <br>(length is ignored)
+        Display file video1.mp4 <br>in the main zone <br>(Duration is ignored)
     </button>
     <button onclick="SlideshowAPI.showFile('audio', 'song1.mp3', 10);">
-        Play file song1.mp3 <br>as a background audio <br>(length is ignored)
+        Play file song1.mp3 <br>as a background audio <br>(Duration is ignored)
     </button>
 
     <h2>Method SlideshowAPI.next(zoneName)</h2>
@@ -114,7 +114,7 @@ You can use the HTML file bellow as an example. It contains several buttons, eac
         Pause playback <br>in the main zone
     </button>
     <button onclick="SlideshowAPI.resume('Side zone');">
-        Pause playback <br>on the zone called Side zone
+        Resume playback <br>on the zone called Side zone
     </button>
     <button onclick="SlideshowAPI.resume(null);">
         Resume playback <br>in the main zone

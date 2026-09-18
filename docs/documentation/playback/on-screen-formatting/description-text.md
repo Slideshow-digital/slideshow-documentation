@@ -23,3 +23,8 @@ The setup can be done via the web interface → menu `Content` → `Edit` by fil
 /// caption
 Setup of the content with description text
 ///
+
+
+## Video tutorial
+
+<iframe style="width: 100%; aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/YZL1L20VihI?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0" frameborder="0" allowfullscreen></iframe>

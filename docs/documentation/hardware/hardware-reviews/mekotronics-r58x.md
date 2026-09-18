@@ -15,7 +15,7 @@ We received a very interesting Android box for testing Slideshow app – [Mekotr
 - **Other connectors:** HDMI input, RS232 + RS245 pins
 - **Power supply:** 12V DC adapter
 - **Operating system:** Android 12 (rooted)
-- **Dimensions:** 18.6 x 10.4 x 2.9 mm
+- **Dimensions:** 18.6 x 10.4 x 2.9 cm
 
 ## Hardware
 

@@ -1,4 +1,4 @@
-# File upload thorugh FTP and WebDAV
+# File upload through FTP and WebDAV
 
 !!! Warning "Only local access"
     Direct file upload is accessible only within the same local network. It is not accessible remotely through the internet.

@@ -13,7 +13,7 @@ To enable kiosk mode for SlideShow:
 
 1. **Set SlideShow as the Device Owner:**
 
-    - **Rooted devices**: Open the SlideShow [web interface](../network-access/web-interface.md) → menu `Settings` → `Device administator` then click `Enable` below `Device owner`. 
+    - **Rooted devices**: Open the SlideShow [web interface](../network-access/web-interface.md) → menu `Settings` → `Device administrator` then click `Enable` below `Device owner`. 
     - **Non-rooted devices**: Use Android Debug Bridge (ADB) to set SlideShow as the device owner. Run the following command from a PC: 
    
         ```

@@ -19,7 +19,7 @@ Creating new content with type Audio/video stream
 
 If you want to stream video in your local network, we suggest trying one of the two great applications: [VLC media player](https://www.videolan.org/) and [FFmpeg](https://ffmpeg.org/). Both are free and open source.
 
-**VLC media player** is a player you can use for regular playback of videos and movies. Among many other advanced features, it can also stream files, webcam or even your desktop through the network. You can set up streaming from menu `Media` → `Stream...`, pick a source, click on `Stream` and configure HTTP streaming destination, which is supported by Slideshow. The resulting stream URL address will be `http://{IP address of your computer:8080/` (provided you didn’t change the port or path while setting it up).
+**VLC media player** is a player you can use for regular playback of videos and movies. Among many other advanced features, it can also stream files, webcam or even your desktop through the network. You can set up streaming from menu `Media` → `Stream...`, pick a source, click on `Stream` and configure HTTP streaming destination, which is supported by Slideshow. The resulting stream URL address will be `http://{IP address of your computer}:8080/` (provided you didn’t change the port or path while setting it up).
 
 ![Choosing stream source in VLC](video_stream_vlc_1.png){ width="320" style="display: inline" }
 ![Setting up HTTP streaming destination in VLC](video_stream_vlc_2.png){ width="320" style="display: inline" }

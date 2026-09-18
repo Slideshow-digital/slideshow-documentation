@@ -15,7 +15,7 @@ We decided to get the newest stick from Amazon called [Fire TV Stick 4K Max](htt
 - **Power supply:** 5.25V/1A DC adapter
 - **Operating system:** Fire OS 7.2.5.5 (based on Android 9, modified by Amazon)
 
-By default, there is no expansion option, the stick is without a microSD card slot and there is only one USB-C connector, which has to be used for power supply. If you want to expand the connectivity, you can buy a [special adapter](https://www.amazon.com/Amazon-Ethernet-Adapter-Fire-Devices/dp/B074TC662N) for wired LAN connection or a USB splitter for connecting a USB Flash drive, mouse or keyboard.
+By default, there is no expansion option, the stick is without a microSD card slot and there is only one micro USB connector, which has to be used for power supply. If you want to expand the connectivity, you can buy a [special adapter](https://www.amazon.com/Amazon-Ethernet-Adapter-Fire-Devices/dp/B074TC662N) for wired LAN connection or a USB splitter for connecting a USB Flash drive, mouse or keyboard.
 
 ## Unpacking
 

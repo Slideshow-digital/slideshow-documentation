@@ -1,6 +1,6 @@
 # Web pages
 
-Slideshow app can display web pages and HTML files directly on the screen using of the Android device.
+Slideshow app can display web pages and HTML files directly on the screen using an Android device.
 
 ## Displaying web page
 

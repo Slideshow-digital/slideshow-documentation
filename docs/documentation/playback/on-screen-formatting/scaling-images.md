@@ -2,7 +2,7 @@
 
 If resolution of image or video doesn’t match the resolution of the zone where it should be displayed, Slideshow can scale the picture using various methods, which differ in how much is the picture scaled up or down and whether the aspect ratio is preserved.
 
-The method for scaling can be set globally via web interface → menu `Settings` → `Device settings` → item `Image scale type` or on-screen menu → `Basic settings` → item `Image scale type`. Scaling videos works only if you are using Enhanced video player.
+The method for scaling can be set globally via web interface → menu `Settings` → `Device settings` → item `Image scale type` or on-screen menu → `Basic settings` → item `Image scale type`. Scaling videos works only if you are using video player type Exoplayer.
 
 You can find examples of various scaling types below for the reference. They each display the same image in several different zones, each zone has dark grey background.
 
